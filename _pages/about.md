@@ -20,8 +20,7 @@ social: true
 
 <strong>Welcome!</strong>
 
-New perspectives on the Solar System are emerging as we study the
-data beamed back by interplanetary spacecraft exploring distant worlds.
+New perspectives on the Solar System are emerging as interplanetary spacecraft explore distant worlds.
 Observations reveal *active* planetary systems: <a href="https://news.nationalgeographic.com/2017/08/mars-snow-summer-water-ice-planets-space-science/" target="\_blank">snow and ice</a>,
 <a href="https://svs.gsfc.nasa.gov/11455" target="\_blank">volcanoes</a> and
 <a href="https://www.nasa.gov/centers/marshall/news/lunar/index.html" target="\_blank">impacts</a>, <a href="https://www.planetfour.org/#/about" target="\_blank">jets</a> and <a href="http://ciclops.org/view/6226/CASSINI-FINDS-PLETHORA-OF-PLUMES-HOTSPOTS-AT-ENCELADUS" target="\_blank">geysers</a> -- motion and change are

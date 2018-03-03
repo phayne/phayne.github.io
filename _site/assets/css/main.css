@@ -330,9 +330,9 @@ body { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: 
 
 .right { float: right; }
 
-.site-header { border-bottom: 1px solid #424242; background-image: url(../../assets/img/purple-planets.jpg); background-position: center; background-repeat: no-repeat; background-background-color: #000; opacity: 0.95; position: fixed; left: 0px; top: 0px; width: 100%; z-index: 50; }
-.site-header a { color: #333; }
-.site-header a:hover { color: #00369f; }
+.site-header { border-bottom: 1px solid #424242; background-image: url(../../assets/img/purple-planets_crop.jpg); background-position: center; background-repeat: no-repeat; background-background-color: #000; opacity: 0.95; position: fixed; left: 0px; top: 0px; width: 100%; z-index: 50; }
+.site-header a { color: #fff; text-shadow: 1px 1px 2px #333; }
+.site-header a:hover { color: #00369f; text-shadow: .5px .5px 1px #fff; }
 
 .site-title { font-size: 20px; color: #ccc; line-height: 56px; letter-spacing: -1px; margin-bottom: 0; }
 

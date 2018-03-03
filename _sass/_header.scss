@@ -2,14 +2,21 @@
     border-bottom: 1px solid $grey-color-dark;
     // background: url(../../assets/img/7.jpg) center center
     background: {
-      image: url(../../assets/img/purple-planets.jpg);
+      image: url(../../assets/img/purple-planets_crop.jpg);
       position: center;
       repeat: no-repeat;
       //opacity: 0.75;
       background-color: #000;
     }
-    a { color: $dark-gray; }
-    a:hover { color: $theme-color; }
+    a {
+      color: #fff;
+      text-shadow: 1px 1px 2px $dark-gray;
+
+    }
+    a:hover {
+      color: $theme-color;
+      text-shadow: .5px .5px 1px #fff;
+    }
     opacity: 0.95;
     position:fixed;
     left:0px;

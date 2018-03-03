@@ -2,15 +2,15 @@
 layout: page
 title: research
 permalink: /research/
-description: A growing collection of research projects.
+description: Brief summaries of past and ongoing research projects.
 ---
 
-{% for project in site.research %}
+{% for project in site.projects %}
 
 {% if project.redirect %}
 <div class="project">
     <div class="thumbnail">
-        <a href="{{ project.redirect }}" target="_blank">
+        <a href="{{ project.redirect }}" target="\_blank">
         {% if project.img %}
         <img class="thumbnail" src="{{ project.img | prepend: site.baseurl | prepend: site.url }}"/>
         {% else %}
