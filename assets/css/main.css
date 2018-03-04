@@ -398,9 +398,9 @@ footer a:hover { color: #00369f; }
 .profile img { box-shadow: 0 0 5px #828282; width: 100%; }
 
 .address { font-family: monospace; }
-.address p { margin: 0; }
+.address p { margin: 0; font-size: 0.75rem; }
 
-.cv p { margin: 5px; margin-top: 5px; margin-bottom: 10px; font-family: monospace; font-size: 0.75rem; font-weight: 300; }
+.cv p { margin: 5px; margin-top: 10px; margin-bottom: 10px; font-family: monospace; font-size: 0.75rem; font-weight: 300; }
 
 .news { border-top: 1px solid #e8e8e8; margin-top: 30px; padding-top: 20px; }
 .news h2 { font-weight: bold; margin-top: 0; margin-bottom: 10px; }
