@@ -1,12 +1,3 @@
-<<<<<<< HEAD
----
-layout: default
----
-
-<div class="header-bar">
-  <h1>{{ site.blog_name }}</h1>
-  <h2>{{ site.blog_description }}</h2>
-=======
 <!DOCTYPE html>
 <html>
 
@@ -15,14 +6,14 @@ layout: default
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Paul O. Hayne</title>
+  <title>Paul O. Hayne | Titan Occultations</title>
   <meta name="description" content="A simple academic web site design. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
   <!--- <link rel="shortcut icon" href="/assets/img/favicon.ico"> --->
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/projects/4_titan/">
 </head>
 
 
@@ -95,43 +86,47 @@ layout: default
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Hayne Research Group</h1>
-  <h2>research activities, meetings, and announcements</h2>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Titan Occultations</h1>
+    <h5 class="post-description">peering through the haze</h5>
+  </header>
+
+  <article class="post-content Titan Occultations clearfix">
+    <p>Saturn’s largest moon, Titan, is also the only moon with a thick atmosphere.
+One of the most spectacular discoveries of the Cassini-Huygens mission was Titan’s “methanological” cycle – a system of river channels, lakes, and seas comparable in size to North America’s Great Lakes. Seasonal storms produce methane/ethane rainfall, which may recharge the rivers and lakes. However, methane is rapidly destroyed by sunlight in the upper atmosphere, where it forms larger hydrocarbon molecules, similar to “smog.” The fate of these molecules is unknown. Do they precipitate and blanket the surface?</p>
+
+<div class="img_row">
+    <img class="col one" src="/assets/img/titan.jpg" alt="" title="Titan" />
+    <img class="col one" src="/assets/img/titan_occ2.jpg" alt="" title="Titan occultation" />
+    <img class="col one" src="/assets/img/titan_vims.jpg" alt="" title="Titan surface" />
+</div>
+<div class="col three caption">
+    Titan's surface is obscured from view in visible wavelengths, due to the thick, scattering haze. Cassini's Visual and Infrared Mapping Spectrometer (VIMS) images the surface within seven different atmospheric windows, from ~1 - 5 &mu;m. We used solar occultation data to constrain models of radiative transfer in Titan's atmosphere. We then applied these models to VIMS surface observations to correct surface reflectance measurements and derive the surface composition. <i>Credit: NASA/JPL/Caltech/U. Arizona</i>
 </div>
 
+<p>Comparable in size to Jupiter’s moon Ganymede, Titan’s interior is <em>differentiated</em> into a rocky core and an icy mantle. The crustal material is therefore probably composed mostly of water ice. However, Titan’s atmospheric haze obscures the surface from view. Infrared wavelengths allow us to peer through the haze and absorbing molecules in the atmosphere, but the view is not totally clear.</p>
 
-<ul class="post-list">
-<<<<<<< HEAD
-  {% for post in paginator.posts %}
-    <li>
-      <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-      <p>{{ post.description }}</p>
-    </li>
-  {% endfor %}
+<p>We designed and carried out a series of occultation experiments to probe Titan’s atmospheric transmission - similar to exoplanet transit spectroscopy. With improved atmospheric parameters, we were able to more clearly “see” Titan’s surface and determine its composition. This approach revealed an icy surface, similar in composition to other icy satellites, but with an imprint of the precipitated hydrocarbon particles.</p>
+
+<p>Further information:</p>
+<div class="publications">
+<ul>
+<li><u>Hayne, P. O.</u>, McCord, T. B., &amp; Sotin, C. (2014). Titan’s surface composition and atmospheric transmission with solar occultation measurements by Cassini VIMS. Icarus, 243, 158-172.
+<a href="https://www.sciencedirect.com/science/article/pii/S001910351400462X">Link</a></li>
+<li>Aharonson, O., Hayes, A. G., <u>Hayne, P. O.</u>, Lopes, R. M., Lucas, A., &amp; Perron, J. T. (2014). Titan's surface geology. Titan, by Ingo Müller-Wodarg, Caitlin A. Griffith, Emmanuel Lellouch, Thomas E. Cravens, Cambridge, UK: Cambridge University Press, 2014, p. 63, 63.
+<a href="https://www.cambridge.org/core/books/titan/titans-surface-geology/6766D4632F913490BD8B2291DC909FD8">Link</a></li>
 </ul>
+</div>
 
-{% include pagination.html %}
-=======
+  </article>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-web-page/">New web page</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>more exciting times</p>
-    </li>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-group/">New beginnings at CU Boulder!</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>exciting times</p>
-    </li>
-  
-</ul>
 
-
-
+</div>
 
       </div>
     </div>
@@ -182,4 +177,3 @@ ga('send', 'pageview');
   </body>
 
 </html>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79

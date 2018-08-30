@@ -1,12 +1,3 @@
-<<<<<<< HEAD
----
-layout: default
----
-
-<div class="header-bar">
-  <h1>{{ site.blog_name }}</h1>
-  <h2>{{ site.blog_description }}</h2>
-=======
 <!DOCTYPE html>
 <html>
 
@@ -15,14 +6,14 @@ layout: default
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Paul O. Hayne</title>
+  <title>Paul O. Hayne | Ceres Thermal Models</title>
   <meta name="description" content="A simple academic web site design. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
   <!--- <link rel="shortcut icon" href="/assets/img/favicon.ico"> --->
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/projects/5_ceres/">
 </head>
 
 
@@ -95,43 +86,43 @@ layout: default
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Hayne Research Group</h1>
-  <h2>research activities, meetings, and announcements</h2>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ceres Thermal Models</h1>
+    <h5 class="post-description">an icy crust?</h5>
+  </header>
+
+  <article class="post-content Ceres Thermal Models clearfix">
+    <p>Ceres is the largest body in the Main Asteroid Belt, and also the innermost dwarf planet in the Solar System.
+At a mean solar distance of <script type="math/tex">\sim 2.8</script> AU, Ceres also occupies a very interesting place, near the “snow line” – an imaginary cutoff in the protoplanetary disk, between water vapor and ice. Ceres’ surface contains little water, because the snow line has moved outward to <script type="math/tex">\sim 5</script> AU (near the orbit of Jupiter). However, sporadic water vapor detections around Ceres have led to the idea that remnants of the dwarf planet’s icy past might linger just beneath the surface.</p>
+
+<div class="img_row">
+    <img class="col two" src="/assets/img/ceres.jpg" alt="" title="Mars polar ice cap" />
+    <img class="col one" src="/assets/img/ceres_psr.jpg" alt="" title="Mars PLD" />
+</div>
+<div class="col three caption">
+    (Left) Occator crater, host of the (in)famous "bright spots". Our models show that these are not water ice, but instead could be much more stable (refractory) compounds such as salt minerals.
+    (Right) Ceres' permanently shadowed regions (PSR) are likely to harbor water ice deposits, if they remain shadowed over the entire ~12-kyr obliquity cycle. <i>Credit: NASA/Dawn Mission/JPL/Caltech</i>
 </div>
 
+<p>We developed thermal and vapor transport models to investigate ice stability on Ceres, using realistic rough topography. Accounting for roughness increases the modeled extent of ground ice (to <script type="math/tex">\sim 30-40^\circ</script> latitude), but surface ice is limited to permanent shadows on billion-year timescales. However, lifetimes of illuminated ice may be up to <script type="math/tex">\sim 100</script> kyr if it is relatively pure and cohesive.</p>
 
-<ul class="post-list">
-<<<<<<< HEAD
-  {% for post in paginator.posts %}
-    <li>
-      <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-      <p>{{ post.description }}</p>
-    </li>
-  {% endfor %}
+<p>Further information:</p>
+<div class="publications">
+<ul>
+<li><u>Hayne, P. O.</u>, &amp; Aharonson, O. (2015). Thermal stability of ice on Ceres with rough topography. <i>Journal of Geophysical Research: Planets, 120(9)</i>, 1567-1584.
+<a href="http://onlinelibrary.wiley.com/doi/10.1002/2015JE004887/full">Link</a></li>
 </ul>
+</div>
 
-{% include pagination.html %}
-=======
+  </article>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-web-page/">New web page</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>more exciting times</p>
-    </li>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-group/">New beginnings at CU Boulder!</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>exciting times</p>
-    </li>
-  
-</ul>
 
-
-
+</div>
 
       </div>
     </div>
@@ -182,4 +173,3 @@ ga('send', 'pageview');
   </body>
 
 </html>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79

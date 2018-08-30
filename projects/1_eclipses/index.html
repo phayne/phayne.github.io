@@ -1,12 +1,3 @@
-<<<<<<< HEAD
----
-layout: default
----
-
-<div class="header-bar">
-  <h1>{{ site.blog_name }}</h1>
-  <h2>{{ site.blog_description }}</h2>
-=======
 <!DOCTYPE html>
 <html>
 
@@ -15,14 +6,14 @@ layout: default
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Paul O. Hayne</title>
+  <title>Paul O. Hayne | Lunar Eclipses</title>
   <meta name="description" content="A simple academic web site design. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
   <!--- <link rel="shortcut icon" href="/assets/img/favicon.ico"> --->
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/projects/1_eclipses/">
 </head>
 
 
@@ -95,43 +86,50 @@ layout: default
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Hayne Research Group</h1>
-  <h2>research activities, meetings, and announcements</h2>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Lunar Eclipses</h1>
+    <h5 class="post-description">thermal infrared observations</h5>
+  </header>
+
+  <article class="post-content Lunar Eclipses clearfix">
+    <p>What does the Moon’s uppermost surface reveal about its space environment?
+To find out, we used the Air Force’s Advanced Electro Optical System (AEOS) telescope
+at Haleakala observatory on the summit of Maui, Hawai’i, to observe the Moon during a total lunar eclipse.</p>
+
+<div class="img_row">
+    <img class="col one" src="/assets/img/moon.jpg" alt="" title="placeholder image" />
+    <img class="col one" src="/assets/img/aeos.jpg" alt="" title="placeholder image" />
+    <img class="col one" src="/assets/img/MSX_moon.jpg" alt="" title="placeholder image" />
+</div>
+<div class="col three caption">
+    (Left) A visible-wavelength image of the Moon entering totality during a lunar eclipse.
+    (Middle) The <a href="https://en.wikipedia.org/wiki/Air_Force_Maui_Optical_and_Supercomputing_observatory" target="\_blank">Air Force AEOS</a> telescope on the island of Maui.
+    (Right) A thermal infrared image of the Moon from the <a href="https://irsa.ipac.caltech.edu/Missions/msx.html" target="\_blank">MSX mission</a>. <i>Credit: USAF/NASA/JPL/Caltech</i>
 </div>
 
+<p>By measuring the Moon’s cooling during a <script type="math/tex">\sim 5</script>-hr total eclipse, we can isolate the <em>thermophysical</em> properties of the uppermost <script type="math/tex">\sim 1 - 10</script> mm. Thermal conductivity, porosity, and grain size all affect the cooling rates of planetary <a href="https://en.wikipedia.org/wiki/Regolith" target="\_blank">regoliths</a>.
+Therefore, with the aid of models, we can measure eclipse cooling to isolate the upper layer and quantify these physical properties.
+Many of the Moon’s most familiar features disappear in thermal images during an eclipse, replaced by the glow of denser materials, such as small rocks in crater ejecta. Comparing the AEOS images to thermal maps from the <a href="https://nasa.gov/lro" target="\_blank">Lunar Reconnaissance Orbiter’s</a> <a href="https://diviner.ucla.edu" target="\_blank">Diviner</a> instrument allows us to make inferences about the past and present rates of space weathering, impact gardening, and regolith development – important processes on many planetary bodies.</p>
 
-<ul class="post-list">
-<<<<<<< HEAD
-  {% for post in paginator.posts %}
-    <li>
-      <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-      <p>{{ post.description }}</p>
-    </li>
-  {% endfor %}
+<p>Further information:</p>
+<div class="publications">
+<ul>
+<li>
+<u>Hayne, P. O.</u>, Lucey, P. G., Swindle, T. R., Bandfield, J. L., Siegler, M. A., Greenhagen, B. T., &amp; Paige, D. A. (2015, March). Thermal infrared observations of the moon during lunar eclipse using the air force Maui space surveillance system. In Lunar and Planetary Science Conference (Vol. 46, p. 1997).
+<a href="https://www.hou.usra.edu/meetings/lpsc2015/pdf/1997.pdf" target="\_blank">Link</a>
+</li>
 </ul>
+</div>
 
-{% include pagination.html %}
-=======
+  </article>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-web-page/">New web page</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>more exciting times</p>
-    </li>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-group/">New beginnings at CU Boulder!</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>exciting times</p>
-    </li>
-  
-</ul>
 
-
-
+</div>
 
       </div>
     </div>
@@ -182,4 +180,3 @@ ga('send', 'pageview');
   </body>
 
 </html>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79

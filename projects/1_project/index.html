@@ -1,12 +1,3 @@
-<<<<<<< HEAD
----
-layout: default
----
-
-<div class="header-bar">
-  <h1>{{ site.blog_name }}</h1>
-  <h2>{{ site.blog_description }}</h2>
-=======
 <!DOCTYPE html>
 <html>
 
@@ -15,14 +6,14 @@ layout: default
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Paul O. Hayne</title>
+  <title>Paul O. Hayne | Lunar Eclipse</title>
   <meta name="description" content="A simple academic web site design. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
   <!--- <link rel="shortcut icon" href="/assets/img/favicon.ico"> --->
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/projects/1_project/">
 </head>
 
 
@@ -35,7 +26,7 @@ layout: default
     
     <span class="site-title">
         
-        Paul <strong>Hayne</strong>
+        <strong>Paul</strong> Hayne
     </span>
     
 
@@ -82,7 +73,7 @@ layout: default
         
 
         <!-- CV link -->
-        <!--- <a class="page-link" href="/assets/files/cv.pdf">vitae</a> --->
+        <!-- <a class="page-link" href="/assets/pdf/CV.pdf">vitae</a> -->
 
       </div>
     </nav>
@@ -95,43 +86,37 @@ layout: default
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Hayne Research Group</h1>
-  <h2>research activities, meetings, and announcements</h2>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Lunar Eclipse</h1>
+    <h5 class="post-description">Thermal infrared observations</h5>
+  </header>
+
+  <article class="post-content Lunar Eclipse clearfix">
+    <p>What is the nature of the Moon’s uppermost surface materials?
+How do the continuous erosion and weathering of the lunar surface by impact bombardment affect these materials?
+To find out, we used the Air Force’s Advanced Electro-Optomechanical System (AEOS) telescope
+at Haleakala observatory on the summit of Maui, Hawai’i, to observe the Moon during a total lunar eclipse.</p>
+
+<div class="img_row">
+    <img class="col one" src="/assets/img/moon.jpg" alt="" title="placeholder image" />
+</div>
+<div class="col three caption">
+    An image of the Moon entering totality during a lunar eclipse.
 </div>
 
+<p>Some more description…</p>
 
-<ul class="post-list">
-<<<<<<< HEAD
-  {% for post in paginator.posts %}
-    <li>
-      <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-      <p>{{ post.description }}</p>
-    </li>
-  {% endfor %}
-</ul>
+<p>Some preliminary data…</p>
 
-{% include pagination.html %}
-=======
+  </article>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-web-page/">New web page</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>more exciting times</p>
-    </li>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-group/">New beginnings at CU Boulder!</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>exciting times</p>
-    </li>
-  
-</ul>
 
-
-
+</div>
 
       </div>
     </div>
@@ -182,4 +167,3 @@ ga('send', 'pageview');
   </body>
 
 </html>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
----
-layout: default
----
-
-<div class="header-bar">
-  <h1>{{ site.blog_name }}</h1>
-  <h2>{{ site.blog_description }}</h2>
-=======
 <!DOCTYPE html>
 <html>
 
@@ -15,14 +6,14 @@ layout: default
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Paul O. Hayne</title>
+  <title>Paul O. Hayne | teaching</title>
   <meta name="description" content="A simple academic web site design. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
   <!--- <link rel="shortcut icon" href="/assets/img/favicon.ico"> --->
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/teaching/">
 </head>
 
 
@@ -95,43 +86,78 @@ layout: default
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Hayne Research Group</h1>
-  <h2>research activities, meetings, and announcements</h2>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">teaching</h1>
+    <h5 class="post-description">Education projects, including a growing collection of course materials</h5>
+  </header>
+
+  <article class="post-content teaching clearfix">
+    <div>
+<ul>
+  <li><a href="#teaching">Teaching at CU Boulder</a></li>
+  <li><a href="#outreach">Outreach Activities</a></li>
+</ul>
 </div>
 
+<hr />
 
-<ul class="post-list">
-<<<<<<< HEAD
-  {% for post in paginator.posts %}
-    <li>
-      <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-      <p>{{ post.description }}</p>
-    </li>
-  {% endfor %}
+<h3 id="teaching"> Teaching at CU Boulder </h3>
+
+<ul>
+  <li>Spring semester, 2018: ASTR/ATOC-3720: <i>Planets and their Atmospheres</i>
+    <ul>
+      <li>Lecture notes posted on <code class="highlighter-rouge">GitHub</code>, rendered by <code class="highlighter-rouge">nbiewer</code>:
+        <ul>
+          <li><a href="http://nbviewer.jupyter.org/github/phayne/planetary-atmospheres/blob/master/Lecture01_Intro.ipynb" target="\blank">Lecture01_Intro</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
+<div class="img_row">
+  <img class="col one" src="/assets/img/saturn_vortex.jpg" alt="Saturn's north polar vortex" />
+  <img class="col two" src="/assets/img/mars_atmosphere.jpg" alt="Dust layers in Mars' atmosphere" />
+</div>
 
-{% include pagination.html %}
-=======
+<hr />
+
+<h3 id="outreach"> Outreach activities </h3>
+
+<h4> <a href="http://www.adastra.world/" target="\_blank">Ad Astra Academy</a> </h4>
+
+<div class="img_row">
+    <img class="col one" src="/assets/img/adastra1.jpg" alt="" title="example image" />
+    <img class="col one" src="/assets/img/adastra2.jpg" alt="" title="example image" />
+    <img class="col one" src="/assets/img/adastra3.jpg" alt="" title="example image" />
+</div>
+<div class="col three caption">
+    Students participate in the inaugural Ad Astra Academy: <i>Mars Academy - Brazil</i> in Rio de Janeiro.
+</div>
+
+<p>Through partnerships with educators and scientists in local communities, we are
+seeking to engage young students in the exploration of their world through the
+scientific method. Driven by their curiosity, these students develop hypotheses,
+seek data, and formulate their own conclusions. The capstone of previous
+programs has been acquiring images of Mars from using <a href="https://hirise.lpl.arizona.edu/" target="\_blank">HiRISE</a> camera onboard
+NASA’s <a href="https://mars.nasa.gov/mro" target="\_blank">Mars Reconnaissance Orbiter</a>. More information can be found over at
+<a href="http://www.adastra.world/" target="\_blank">Ad Astra Academy</a>.</p>
+
+<blockquote>
+Science and exploration shouldn't be privileges granted through special access.
+Young people in under-resourced communities throughout the developing world
+deserve the same opportunities afforded to students at the best schools in
+America.
+</blockquote>
+
+  </article>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-web-page/">New web page</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>more exciting times</p>
-    </li>
+
   
-    <li>
-      <h2><a class="post-title" href="/blog/2018/new-group/">New beginnings at CU Boulder!</a></h2>
-      <p class="post-meta">January 8, 2018 — 00:00</p>
-      <p>exciting times</p>
-    </li>
-  
-</ul>
 
-
-
+</div>
 
       </div>
     </div>
@@ -182,4 +208,3 @@ ga('send', 'pageview');
   </body>
 
 </html>
->>>>>>> 2d7ec7f8f8b1c4e00fd3db22fc1a0406d2a22c79
