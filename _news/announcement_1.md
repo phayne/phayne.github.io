@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2018-01-08 15:59:00-0400
 inline: true
 ---
 
-A simple inline announcement.
+Paul Hayne joined the faculty of the <a href="https://www.colorado.edu/aps" target="\_blank">APS</a> department! :sparkles:

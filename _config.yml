@@ -31,7 +31,7 @@ google_analytics: UA-XXXXXXXXX # out your google-analytics code
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
-blog_name: Hayne Research Group
+blog_name: 'EPIC: Exploration of Planetary Ices and Climates'
 blog_description: research activities, meetings, and announcements
 
 # Pagination

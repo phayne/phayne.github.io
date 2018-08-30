@@ -8,14 +8,17 @@
 .address {
     font-family: monospace;
 
-    p { margin: 0; }
+    p {
+      margin: 0;
+      font-size: $footer-font-size;
+    }
 }
 
 .cv {
 
   p {
     margin: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-family: monospace;
     font-size: $footer-font-size;

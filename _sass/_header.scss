@@ -2,7 +2,7 @@
     border-bottom: 1px solid $grey-color-dark;
     // background: url(../../assets/img/7.jpg) center center
     background: {
-      image: url(../../assets/img/purple-planets_crop.jpg);
+      image: url(../../assets/img/purple-planets_full.jpg);
       position: center;
       repeat: no-repeat;
       //opacity: 0.75;
@@ -14,8 +14,9 @@
 
     }
     a:hover {
-      color: $theme-color;
-      text-shadow: .5px .5px 1px #fff;
+      color: #fff;
+      text-decoration: underline;
+      //text-shadow: .5px .5px 1px #fff;
     }
     opacity: 0.95;
     position:fixed;
@@ -45,10 +46,11 @@
     }
 
     .page-link{
+        font-size: 20px;
         line-height: $line-height;
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
-            margin-left: 10px;
+            margin-left: 20px;
         }
     }
     // added for hamburger
