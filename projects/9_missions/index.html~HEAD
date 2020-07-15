@@ -6,14 +6,18 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Paul O. Hayne | Ceres Thermal Models</title>
+  <title>
+    Paul O. Hayne
+     | Mission Involvement
+    
+  </title>
   <meta name="description" content="A simple academic web site design. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
   <!--- <link rel="shortcut icon" href="/assets/img/favicon.ico"> --->
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/projects/5_ceres/">
+  <link rel="canonical" href="/projects/9_missions/">
 </head>
 
 
@@ -44,25 +48,22 @@
 
       <div class="trigger">
         <!-- About -->
-        <a class="page-link" href="/">about</a>
-
-        <!-- Blog -->
-        <a class="page-link" href="/blog/">blog</a>
+        <a class="page-link" href="/">home</a>
 
         <!-- Pages -->
         
           
         
           
-        
-          
-        
-          
-            <a class="page-link" href="/publications/">publications</a>
+            <a class="page-link" href="/group/">group</a>
           
         
           
             <a class="page-link" href="/research/">research</a>
+          
+        
+          
+            <a class="page-link" href="/publications/">publications</a>
           
         
           
@@ -71,6 +72,13 @@
         
           
         
+          
+        
+          
+        
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
 
         <!-- CV link -->
         <!--- <a class="page-link" href="/assets/files/cv.pdf">vitae</a> --->
@@ -89,30 +97,44 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Ceres Thermal Models</h1>
-    <h5 class="post-description">an icy crust?</h5>
+    <h1 class="post-title">Mission Involvement</h1>
+    <h5 class="post-description">exploring distant worlds</h5>
   </header>
 
-  <article class="post-content Ceres Thermal Models clearfix">
-    <p>Ceres is the largest body in the Main Asteroid Belt, and also the innermost dwarf planet in the Solar System.
-At a mean solar distance of <script type="math/tex">\sim 2.8</script> AU, Ceres also occupies a very interesting place, near the “snow line” – an imaginary cutoff in the protoplanetary disk, between water vapor and ice. Ceres’ surface contains little water, because the snow line has moved outward to <script type="math/tex">\sim 5</script> AU (near the orbit of Jupiter). However, sporadic water vapor detections around Ceres have led to the idea that remnants of the dwarf planet’s icy past might linger just beneath the surface.</p>
+  <article class="post-content Mission Involvement clearfix">
+    <p>Our robotic emissaries in space beam back treasure troves of data as they explore the
+furthest reaches of the Solar System.
+Soon, astronauts may also embark on missions to distant worlds, aided by our understanding of the planets and their
+environments in space.
+As a participant in this endeavor, I am a co-investigator on several ongoing and
+upcoming NASA missions.
+I am also active in the areas of instrument development and mission formulation.</p>
 
 <div class="img_row">
-    <img class="col two" src="/assets/img/ceres.jpg" alt="" title="Mars polar ice cap" />
-    <img class="col one" src="/assets/img/ceres_psr.jpg" alt="" title="Mars PLD" />
+    <img class="col one" src="/assets/img/cassini.jpg" alt="Cassini" title="cassini" />
+    <img class="col one" src="/assets/img/lro.jpg" alt="Lunar Reconnaissance Orbiter" title="LRO" />
+    <img class="col one" src="/assets/img/lf.jpg" alt="Lunar Flashlight Mission" title="Lunar Flashlight" />
 </div>
 <div class="col three caption">
-    (Left) Occator crater, host of the (in)famous "bright spots". Our models show that these are not water ice, but instead could be much more stable (refractory) compounds such as salt minerals.
-    (Right) Ceres' permanently shadowed regions (PSR) are likely to harbor water ice deposits, if they remain shadowed over the entire ~12-kyr obliquity cycle. <i>Credit: NASA/Dawn Mission/JPL/Caltech</i>
+    (Left) Cassini spacecraft at Saturn.
+    (Middle) Lunar Reconnaissance Orbiter.
+    (Right) The <a href="https://www.jpl.nasa.gov/cubesat/missions/lunar_flashlight.php" target="\_blank">Lunar Flashlight</a> mission will use lasers to illuminate the permanent shadows and search for ice. <i>Credit: NASA/GSFC/JPL/Caltech</i>
 </div>
 
-<p>We developed thermal and vapor transport models to investigate ice stability on Ceres, using realistic rough topography. Accounting for roughness increases the modeled extent of ground ice (to <script type="math/tex">\sim 30-40^\circ</script> latitude), but surface ice is limited to permanent shadows on billion-year timescales. However, lifetimes of illuminated ice may be up to <script type="math/tex">\sim 100</script> kyr if it is relatively pure and cohesive.</p>
-
-<p>Further information:</p>
-<div class="publications">
+<div>
+Current missions:
 <ul>
-<li><u>Hayne, P. O.</u>, &amp; Aharonson, O. (2015). Thermal stability of ice on Ceres with rough topography. <i>Journal of Geophysical Research: Planets, 120(9)</i>, 1567-1584.
-<a href="http://onlinelibrary.wiley.com/doi/10.1002/2015JE004887/full">Link</a></li>
+  <li><a href="https://mars.nasa.gov/mro/" target="\_blank">Mars Reconnaissance Orbiter</a></li>
+  <li><a href="https://lunar.gsfc.nasa.gov/" target="\_blank">Lunar Reconnaissance Orbiter</a></li>
+  <li><a href="https://www.jpl.nasa.gov/cubesat/missions/lunar_flashlight.php" target="\_blank">Lunar Flashlight</a></li>
+  <li><a href="https://europa.nasa.gov/" target="\_blank">Europa Clipper</a></li>
+</ul>
+</div>
+
+<div>
+Past missions:
+<ul>
+  <li><a href="https://saturn.jpl.nasa.gov/" target="\_blank">Cassini-Huygens</a></li>
 </ul>
 </div>
 
@@ -130,7 +152,7 @@ At a mean solar distance of <script type="math/tex">\sim 2.8</script> AU, Ceres 
     <footer>
 
   <div class="wrapper">
-    &copy; Copyright 2018 Paul O. Hayne.
+    &copy; Copyright 2020 Paul O. Hayne.
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
     

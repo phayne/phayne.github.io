@@ -6,14 +6,18 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Paul O. Hayne | Project 4</title>
+  <title>
+    Paul O. Hayne
+     | Mars Paleoclimate
+    
+  </title>
   <meta name="description" content="A simple academic web site design. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
   <!--- <link rel="shortcut icon" href="/assets/img/favicon.ico"> --->
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/projects/4_project/">
+  <link rel="canonical" href="/projects/4_mars-pld/">
 </head>
 
 
@@ -26,7 +30,7 @@
     
     <span class="site-title">
         
-        <strong>Paul</strong> Hayne
+        Paul <strong>Hayne</strong>
     </span>
     
 
@@ -44,25 +48,22 @@
 
       <div class="trigger">
         <!-- About -->
-        <a class="page-link" href="/">about</a>
-
-        <!-- Blog -->
-        <a class="page-link" href="/blog/">blog</a>
+        <a class="page-link" href="/">home</a>
 
         <!-- Pages -->
         
           
         
           
-        
-          
-        
-          
-            <a class="page-link" href="/publications/">publications</a>
+            <a class="page-link" href="/group/">group</a>
           
         
           
             <a class="page-link" href="/research/">research</a>
+          
+        
+          
+            <a class="page-link" href="/publications/">publications</a>
           
         
           
@@ -71,9 +72,16 @@
         
           
         
+          
+        
+          
+        
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
 
         <!-- CV link -->
-        <!-- <a class="page-link" href="/assets/pdf/CV.pdf">vitae</a> -->
+        <!--- <a class="page-link" href="/assets/files/cv.pdf">vitae</a> --->
 
       </div>
     </nav>
@@ -89,57 +97,31 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Project 4</h1>
-    <h5 class="post-description">another without an image</h5>
+    <h1 class="post-title">Mars Paleoclimate</h1>
+    <h5 class="post-description">clues in the polar ice deposits</h5>
   </header>
 
-  <article class="post-content Project 4 clearfix">
-    <p>Every project has a beautiful feature shocase page. It’s easy to include images, in a flexible 3-column grid format. Make your photos 1/3, 2/3, or full width.</p>
-
-<p>To give your project a background in the portfolio page, just add the img tag to the front matter like so:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: page
-title: Project
-description: a project with a background image
-img: /assets/img/12.jpg
----
-</code></pre></div></div>
+  <article class="post-content Mars Paleoclimate clearfix">
+    <p>Climate variations on Mars are much more extreme than Earth’s, because of the Red Planet’s thin atmosphere and lack of a stabilizing Moon to damp out orbital perturbations by its massive next-door neighbor, Jupiter. We see evidence of these past climate cycles recorded in repetitive layers in Mars’ polar ice caps - the polar layered deposits (PLD). How would a future mission to the polar ice caps extract Mars’ paleoclimate record? I co-led a <a href="http://kiss.caltech.edu/workshops/polar/polar.html" target="\_blank">study</a> sponsored by the <a href="https://kiss.caltech.edu">Keck Institute for Space Studies</a> (KISS), which gathered more than 30 scientists and engineers to develop innovative mission concepts to investigate this question.</p>
 
 <div class="img_row">
-    <img class="col one" src="/assets/img/1.jpg" alt="" title="example image" />
-    <img class="col one" src="/assets/img/2.jpg" alt="" title="example image" />
-    <img class="col one" src="/assets/img/3.jpg" alt="" title="example image" />
+    <img class="col two" src="/assets/img/mars_hrsc_npole.jpg" alt="" title="Mars polar ice cap" />
+    <img class="col one" src="/assets/img/mars_pld1.jpg" alt="" title="Mars PLD" />
 </div>
 <div class="col three caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="img_row">
-    <img class="col three" src="/assets/img/5.jpg" alt="" title="example image" />
-</div>
-<div class="col three caption">
-    This image can also have a caption. It's like magic.
+    (Left) A dramatic view of the north polar ice cap of Mars from the European Space Agency's High-Resolution Stereo Camera.
+    (Right) Periodic climate variations are expressed in the polar layered deposits, with layer thicknesses of ~1 - 100 m.
 </div>
 
-<p>You can also put regular text between your rows of images. Say you wanted to write a little bit about your project before you posted the rest of the images. You describe how you toiled, sweated, <em>bled</em> for your project, and then…. you reveal it’s glory in the next row of images.</p>
+<p>It is likely that Mars’ long-term climate is forced by the polar insolation, dominated by <script type="math/tex">\sim 120</script>-kyr variations in the planetary obliquity. However, models have struggled to reproduce observed patterns in the PLD. A physical mechanism for generating layers through ice and dust accumulation/ablation has remained elusive. Measurements of volatiles and isotopic variations within the PLD must be combined with observations and models of the present-day Martian climate, in order to confidently extrapolate to past climate regimes.</p>
 
-<div class="img_row">
-    <img class="col two" src="/assets/img/6.jpg" alt="" title="example image" />
-    <img class="col one" src="/assets/img/11.jpg" alt="" title="example image" />
+<p>Further information:</p>
+<div class="publications">
+<ul>
+<li><a href="http://kiss.caltech.edu/workshops/polar/polar.html">Workshop 1</a></li>
+<li><a href="http://kiss.caltech.edu/workshops/polar/polar2.html">Workshop 2</a></li>
+</ul>
 </div>
-<div class="col three caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-<p><br /><br /><br /></p>
-
-<p>The code is simple. Just add a col class to your image, and another class specifying the width: one, two, or three columns wide. Here’s the code for the last row of images above:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="img_row"&gt;
-  &lt;img class="col two" src="/img/6.jpg"/&gt;
-  &lt;img class="col one" src="/img/11.jpg"/&gt;
-&lt;/div&gt;
-</code></pre></div></div>
 
   </article>
 
@@ -155,7 +137,7 @@ img: /assets/img/12.jpg
     <footer>
 
   <div class="wrapper">
-    &copy; Copyright 2018 Paul O. Hayne.
+    &copy; Copyright 2020 Paul O. Hayne.
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
     
