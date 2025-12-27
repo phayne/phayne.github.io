@@ -1,0 +1,3004 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>main</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p><span><strong><span style="color: darkgray">Paul O.
+Hayne</span></strong></span><br />
+</p>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">University of Colorado, Boulder</td>
+<td style="text-align: left;"><a
+href="mailto:Paul.Hayne@Colorado.edu">Paul.Hayne@Colorado.edu</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Astrophysical &amp; Planetary Sciences
+Department</td>
+<td style="text-align: left;"><a
+href="https://www.colorado.edu/aps/paul-hayne">https://www.colorado.edu/aps/paul-hayne</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">391 UCB</td>
+<td style="text-align: left;">Office: Duane Physics D321 <span
+class="math inline">||</span> LASP-SPSC N294</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Boulder, CO 80309</td>
+<td style="text-align: left;">Phone: (303) 735-6399 [O]   (720) 390-9276
+[M]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Summary</span></span></td>
+<td style="text-align: left;"><span>My research focuses on the surfaces
+and atmospheres of icy planets and moons.</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span>I develop computational models,
+missions, and instrumentation to better understand these </span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span>planetary bodies. Teaching,
+mentoring, and public engagement are also fundamental to my
+work.</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Positions</span></span></td>
+<td style="text-align: left;"><strong>University of Colorado,
+Boulder</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Held</span></span></td>
+<td style="text-align: left;">2024 – present  <em>Associate
+Professor</em> (with tenure)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2018 – 2024  <em>Assistant
+Professor</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Astrophysical &amp; Planetary Sciences
+Department,</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">and Laboratory for Atmospheric &amp; Space
+Physics</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA – Jet Propulsion
+Laboratory</strong>, California Institute of Technology</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2012 – 2017  <em>Research
+Scientist</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>California Institute of
+Technology</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2011 – 2012  <em>Postdoctoral Scholar</em>
+(Supervisor: O. Aharonson)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Education</span></span></td>
+<td style="text-align: left;"><strong>University of California, Los
+Angeles</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Ph.D.</em>, Geophysics &amp; Space
+Physics, 2010 (Advisor: D. A. Paige)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Stanford University</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>M.S.</em>, Geophysics, 2005 (Advisors:
+N. H. Sleep &amp; J. J. Lissauer)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>B.S.</em>, Geophysics, 2003</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Mission</span></span></td>
+<td style="text-align: left;"><strong>Emirates Mission to the Asteroid
+belt (EMA)</strong>, UAE Space Agency</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Experience</span></span></td>
+<td style="text-align: left;">and Laboratory for Atmospheric &amp; Space
+Physics</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Project Scientist</em>
+(2021–present)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA Lunar Compact Infrared
+Imaging System (L-CIRiS)</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Principal Investigator</em>
+(2019–present), CLPS-CP22 lunar south polar mission</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA Lunar-Vulkan Imaging and
+Spectroscopy Explorer (Lunar-VISE)</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Co-Investigator</em>
+(2019–present)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Investigation Lead</em>, Lunar-VISE
+Compact Infrared Imaging System (LV-CIRiS)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA Europa Clipper</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Co-Investigator</em> (2017–present)
+and <em>Investigation Scientist</em> (2015–2018)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Europa Thermal Emission Imaging System
+(E-THEMIS)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA Janus</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Co-Investigator</em> and
+<em>Investigation Lead</em> (2019–2024)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Thermal IR Camera</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA Mars Reconnaissance
+Orbiter</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Co-Investigator</em>
+(2017–present)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Mars Climate Sounder</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Mission</span></span></td>
+<td style="text-align: left;"><strong>NASA Lunar
+Flashlight</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Experience</span></span></td>
+<td style="text-align: left;"><em>Co-Investigator</em> (2012–2023)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">(cont.)</span></span></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA Lunar Reconnaissance
+Orbiter</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Co-Investigator</em>
+(2011–present)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Diviner Lunar Radiometer Experiment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Science Team Affiliate:</em>
+<strong>NASA CLPS/IM-2 South Pole</strong> Moon3D camera
+(2024-present)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA OSIRIS-REx</strong>
+(2018–2020), <strong>NASA Dawn</strong> (2016–2019),</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA/ESA Cassini-Huygens</strong>
+(2006–2014)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Selected</span></span></td>
+<td style="text-align: left;">   2025–2027  <em>Advanced 3-d
+Thermophysical Model</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">External</span></span></td>
+<td style="text-align: left;">                   <em>to Enable Europa
+Clipper Interdisciplinary Science</em>   </td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Grants</span></span></td>
+<td style="text-align: left;">                   PI: P. Hayne</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">&amp;</span></span></td>
+<td style="text-align: left;">                   NASA Precursor Science
+Investigations for Europa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Contracts</span></span></td>
+<td style="text-align: left;">                   $261k</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2019–2028   <em>Lunar Vulkan Imaging
+and Spectroscopy Explorer (Lunar-VISE)</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: K. Donaldson Hanna
+(Co-I/Instrument Lead: P. Hayne)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA Payloads and
+Research Investigations on the Surface of the Moon (PRISM)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    $35M ($2.2M subaward
+to LASP)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2019–2028   <em>Lunar Compact Infrared
+Imaging System (L-CIRiS)</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: P. Hayne</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA Lunar Science and
+Instrument Technology Payloads / $4.1M</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2015–2034   <em>Europa Thermal Emission
+Imaging System</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: P. Christensen
+(Co-I: P. Hayne)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA Europa Clipper
+Mission / <span class="math inline">∼</span>$600k subaward to LASP for
+Phases D–E</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2016–2025   <em>Lunar Reconnaissance
+Orbiter Extended Missions 3–5</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: D. Paige (Co-I: P.
+Hayne)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA Discovery Program
+/ <span class="math inline">∼</span>$2.2M allocation for Co-I Hayne</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2016–2025   <em>Mars Reconnaissance
+Orbiter Extended Missions 4–6</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: A. Kleinböhl
+(Co-I: P. Hayne)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA Mars Program /
+<span class="math inline">∼</span>$1.5M allocation for Co-I Hayne</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2019–2024   <em>Janus Mission</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: D. Scheeres
+(Co-I/Instrument Lead: P. Hayne)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA SIMPLEx Program /
+<span class="math inline">∼</span> $400k subaward to LASP</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2013–2023   <em>Lunar Flashlight
+Science Investigation</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: B. Cohen (Co-I: P.
+Hayne)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA Advanced
+Exploration Systems / <span class="math inline">∼</span>$900k allocation
+for Co-I Hayne</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2018–2021   <em>Boulders on Bennu:
+Modeling Thermal Emission from Boulders for</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                   <em>Yarkovsky Effect
+and Thermal Inertia Investigations</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: P. Hayne (Science
+PI: C. Elder)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA OSIRIS-REx
+Participating Scientist Program / $346k</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2017–2018   <em>Unlocking the Climate
+Record Stored within Mars’ Polar Layered Deposits</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: P. Hayne</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    W. M. Keck Institute
+for Space Studies / $50k</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Grants</span></span></td>
+<td style="text-align: left;">   2015–2018   <em>Inter-seasonal and
+Inter-annual Surface Dust Fluxes on Mars</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Cont.</span></span></td>
+<td style="text-align: left;">                    PI: P. Hayne (Science
+PI: S. Piqueux)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA Mars Data
+Analysis Program / $331k</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2013–2017   <em>Volatile Regolith
+Thermal Investigation Consortium for Exploration</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    <em>and Science
+(VORTICES)</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: A. Rivkin (Co-I:
+P. Hayne)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA Solar System
+Exploration Research Virtual Institute / <span
+class="math inline">∼</span>$120k</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2014–2016   <em>Thermal Infrared
+Observations of the Moon during Lunar Eclipse</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: P. Lucey (Co-I: P.
+Hayne)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    NASA Planetary
+Astronomy / $143k allocation for P. Hayne</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2013–2014   <em>New Approaches to Lunar
+Ice Detection and Mapping</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    PI: P. Hayne</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">                    W. M. Keck Institute
+for Space Studies / $50k</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">National</span></span></td>
+<td style="text-align: left;"><strong>Europa ICONS</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Service</span></span></td>
+<td style="text-align: left;"><em>Member</em> of NASA’s Program
+Definition Tiger Team (2023–2024)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA Artemis</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Course Developer</em>, Astronaut
+Training – Lunar Surface Environment (2024–present)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Keck Institute for Space
+Studies</strong>, California Institute of Technology</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Study Co-Lead</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2017–2018: <a
+href="http://kiss.caltech.edu/workshops/polar/polar.html">Unlocking the
+Climate Record Stored within Mars’ Polar</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a
+href="http://kiss.caltech.edu/workshops/polar/polar.html">Layered
+Deposits</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2013–2014: <a
+href="http://kiss.caltech.edu/workshops/lunar_ice/lunar_ice.html">New
+Approaches to Lunar Ice Detection and Mapping</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>American Astronomical
+Society</strong>, Division for Planetary Sciences</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Editorial Board Member</em>, Icarus
+(2020–present)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Member</em> of the Federal Relations
+Subcommittee (2017–2022)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Local Organizing Committee</em>,
+Annual Meeting (2016)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Panelist</em>, Annual Meeting
+(2015)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>American Geophysical
+Union</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Session Co-organizer</em> (Mars
+Atmosphere), Annual Meeting (2014–2024)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Early-Career Planetary
+Explorers</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Co-founder</em> (2012) and
+<em>Co-leader</em> (2012–2020)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   World-wide advocacy organization for
+early-career planetary scientists</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>NASA Science Mission
+Directorate</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Appointed Member</em>, Mars
+Exploration Program:</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   Ice and Climate Evolution Science
+Assessment Group (2018–2019)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Review Panel Member</em>
+(2012–present)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>National Research Council – Space
+Studies Board</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Raconteur</em>, Planetary Science
+Decadal Survey (2009–2010)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Referee</strong> for major
+scientific journals:</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Journal of Geophysical Research,
+Geophysical Research Letters, Icarus,</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Astrophysical Journal, Planetary &amp;
+Space Science, Advances in Space Research,</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Space Science Reviews, Geology,
+Science Advances, Nature Astronomy, Nature,</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>PNAS</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Departmental</span></span></td>
+<td style="text-align: left;"><em>Committee Membership (APS
+Department):</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">&amp;</span></span></td>
+<td style="text-align: left;">   2024/2025     McCray Fellowship
+Committee</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">LASP</span></span></td>
+<td style="text-align: left;">   2024/2025     Sommers-Bausch
+Observatory/Fiske Planetarium Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Service</span></span></td>
+<td style="text-align: left;">   2024/2025     Faculty Search
+Committee</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2024/2025     Graduate Curriculum and
+Concerns Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2024/2025     Beyond Boulder (Graduate
+School Info Session)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2023/2024     Graduate Admissions
+Committee (Vice Chair)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2023/2024     Faculty Search
+Committee</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2023/2024     Social Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2022/2023     Outreach &amp;
+Development Committee</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2022/2023     Friday Lunch Seminar
+Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2022/2023     Graduate Admissions
+Committee (Chair)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2021/2022     Graduate Admissions
+Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2021/2022     Faculty Search
+Committee</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2021/2022     Outreach &amp;
+Development Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2020/2021     Fall Semester/COVID
+Planning Committee</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2020/2021     Grad Welcome and Social
+Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2019/2020     Social
+Committee (Chair)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2019/2020     Colloquium Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2019/2020     Undergraduate Curriculum
+and Concerns Comm.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2019/2020     Graduate Admissions
+Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2018/2019     Social Committee (Acting
+Chair)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2018/2019     Colloquium Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Committee Membership (LASP):</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2023–present  LASP Research Scientist
+promotion committees</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2024–2025     LASP Internal Research
+and Development Committee</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2023–2024     LASP Strategic Planning
+Team</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Departmental Mentoring:</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2018–present     APS Department
+Undergraduate Student Mentor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2018–present     APS Department
+Graduate Student Mentor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Additional Service:</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2018-2019     Co-organizer: “Planet
+Lunch"                             CU Boulder</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2018-2020     Organizer: Natural
+Sciences New Faculty Coffee     CU Boulder</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Visiting</span></span></td>
+<td style="text-align: left;"><strong>Lawrence Livermore National
+Laboratory</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Appointments</span></span></td>
+<td style="text-align: left;"><em>Visiting Scientist</em> (2017)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Planetary Defense Program / Weapons and
+Complex Integration (WCI)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Weizmann Institute of
+Science</strong>, Israel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Visiting Scientist</em> (2015,
+2016)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">The Helen Kimmel Center for Planetary
+Science</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Honors</span></span></td>
+<td style="text-align: left;">   2022     <em>RIO Faculty Fellow</em>,
+CU Research &amp; Innovation Office</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span style="color: darkgray">&amp;
+Awards</span></span></td>
+<td style="text-align: left;">   2013     <em>NASA Group Achievement
+Award</em>, Diviner Lunar Radiometer science team</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2011     <em>NASA Group Achievement
+Award</em>, Mars Climate Sounder science team</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2010     <em>Best Student Paper
+Award</em>, NASA Lunar Science Forum</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2010     <em>NASA Group Achievement
+Award</em>, Diviner Lunar Radiometer operations team</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2010     <em>NASA Group Achievement
+Award</em>, Diviner Lunar Radiometer science team</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2008     <em>Simon Latimer Award for
+Service</em>, UCLA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2006     <em>Graduate Fellowship</em>,
+Institute of Geophysics and Planetary Physics</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2006     <em>Chancellor’s Prize</em>,
+UCLA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2003     <em>Graduate Fellowship</em>,
+Dept. of Geophysics, Stanford University</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2001     <em>Summer Research
+Fellowship</em>, Dept. of Physics, Stanford University</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Exam</span></span></td>
+<td colspan="3" style="text-align: left;"><em>Graduate Comprehensive
+Examinations:</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Committees</span></span></td>
+<td style="text-align: left;">2024</td>
+<td style="text-align: left;">James Crowley</td>
+<td style="text-align: left;">CU / APS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">&amp;</span></span></td>
+<td style="text-align: left;">2024</td>
+<td style="text-align: left;">Michael Rothman</td>
+<td style="text-align: left;">CU / APS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Defenses</span></span></td>
+<td style="text-align: left;">2024</td>
+<td style="text-align: left;">Sam Cartwright</td>
+<td style="text-align: left;">CU / GEOL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2023</td>
+<td style="text-align: left;">Robert Stevens<span
+class="math inline"><sup>*</sup></span></td>
+<td style="text-align: left;">CU / APS <span
+class="math inline"><sup>*</sup></span>Primary Advisor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2023</td>
+<td style="text-align: left;">Helle Skjetne</td>
+<td style="text-align: left;">CU / GEOL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2023</td>
+<td style="text-align: left;">Kris Laferriere</td>
+<td style="text-align: left;">Purdue U.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;">Harry Brodsky</td>
+<td style="text-align: left;">CU / GEOL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;">Patrick Behr</td>
+<td style="text-align: left;">CU / APS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;">Dahlia Baker</td>
+<td style="text-align: left;">CU / AES</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2021</td>
+<td style="text-align: left;">Kya Sorli<span
+class="math inline"><sup>*</sup></span></td>
+<td style="text-align: left;">CU / APS <span
+class="math inline"><sup>*</sup></span>Primary Advisor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">E. Fernando Cruz</td>
+<td style="text-align: left;">CU / APS Non-advocate Chair</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">Rachel Hoover</td>
+<td style="text-align: left;">CU / GEOL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">Eryn Cangi</td>
+<td style="text-align: left;">CU / APS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">Noora Alsaeed</td>
+<td style="text-align: left;">CU / APS Non-advocate Chair</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">Raven Larson<span
+class="math inline"><sup>*</sup></span></td>
+<td style="text-align: left;">CU / APS <span
+class="math inline"><sup>*</sup></span>Primary Advisor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">Andrew Wilcoski<span
+class="math inline"><sup>*</sup></span></td>
+<td style="text-align: left;">CU / APS <span
+class="math inline"><sup>*</sup></span>Primary Advisor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">Perianne Johnson</td>
+<td style="text-align: left;">CU / APS Non-advocate Chair</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">William Waalkes</td>
+<td style="text-align: left;">CU / APS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2018</td>
+<td style="text-align: left;">Momchil Molnar</td>
+<td style="text-align: left;">CU / APS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2018</td>
+<td style="text-align: left;">Arika Egan</td>
+<td style="text-align: left;">CU / APS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;"><em>Ph.D. Dissertation
+Defenses:</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2024</td>
+<td style="text-align: left;">Dr. Koundinya (Ken) Kuppa</td>
+<td style="text-align: left;">CU / AES</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2024</td>
+<td style="text-align: left;">Dr. Lucas Lange</td>
+<td style="text-align: left;">Sorbonne Université / LMD</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;"><strong>Dr. Noora Alsaeed</strong><span
+class="math inline"><sup>*</sup></span></td>
+<td style="text-align: left;">CU / APS <span
+class="math inline"><sup>*</sup></span>Primary Advisor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;"><strong>Dr. Andrew Wilcoski</strong><span
+class="math inline"><sup>*</sup></span></td>
+<td style="text-align: left;">CU / APS <span
+class="math inline"><sup>*</sup></span>Primary Advisor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;">Dr. Chase Chivers</td>
+<td style="text-align: left;">Georgia Tech / EAS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;">Dr. Christopher Kremer</td>
+<td style="text-align: left;">Brown U. / DEEPS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">Dr. Marek Slipski</td>
+<td style="text-align: left;">CU / GEOP</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;"><em>Undergraduate Honors
+Thesis Defenses:</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019</td>
+<td style="text-align: left;">Carlos Eytan Gary Bicas<span
+class="math inline"><sup>*</sup></span></td>
+<td style="text-align: left;">CU / APS <span
+class="math inline"><sup>*</sup></span>Primary Advisor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2018</td>
+<td style="text-align: left;">Amanda Alexander</td>
+<td style="text-align: left;">CU / GEOL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Teaching</span></span></td>
+<td colspan="3" style="text-align: left;"><strong>University of Colorado
+Boulder</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;"><em>ASTR 1030: Accel.
+Introductory Astronomy</em> (Fall, 2018)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;">Instructor for undergraduate
+majors course (115 students)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;"><em>ASTR 3400: Research
+Methods</em> (Spring, 2023; Spring, 2024)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;">Instructor for undergraduate
+majors course (30 students)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;"><em>ASTR 3720: Planets and
+their Atmospheres</em> (Spring, 2018)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;">Instructor for upper-division
+undergraduate course (84 students)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;"><em>ASTR 3750: Planets, Moons,
+and Rings</em> (Fall, 2020; Fall, 2021; Fall, 2022; Fall, 2024)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;">Instructor for undergraduate
+majors course (<span class="math inline">∼</span>100 students)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;"><em>ASTR 5800: Planetary
+Surfaces &amp; Interiors</em> (Fall, 2019; Fall, 2021; Fall, 2023)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;">Instructor for graduate course
+(<span class="math inline">∼</span>15 students)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;"><em>ASTR 5830: Remote Sensing
+of Planetary Surfaces and Atmospheres</em> (Spring, 2025)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;">Instructor for graduate course
+(<span class="math inline">∼</span>10 students)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;"><em>ASTR 5835: Seminar in
+Planetary Science</em> (Spring, 2023; Fall, 2024)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td colspan="3" style="text-align: left;">Co-Instr. for grad. seminar
+(<span class="math inline">∼</span>25 students): “Asteroids" and “Ocean
+Worlds"</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Teaching</span></span></td>
+<td style="text-align: left;"><strong>California Institute of
+Technology</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">(cont.)</span></span></td>
+<td style="text-align: left;"><em>Ge 151: Planetary Surfaces</em>
+(2011)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Co-Instructor &amp; Lecturer for graduate
+course (<span class="math inline">∼</span>6 students)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>University of California, Los
+Angeles</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>ESS 10: Exploring Mars</em>
+(2008)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Teaching Assistant and Lecturer for
+undergraduate course (60 students)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Stanford University</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Geophysics 150: Physics of the
+Earth</em> (2004, 2005)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Teaching Assistant for graduate course
+(<span class="math inline">∼</span>6 students)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Physics 50: Observational
+Astronomy</em> (2002, 2003)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Teaching Assistant for undergraduate
+course (<span class="math inline">∼</span>20 students)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Mentoring</span></span></td>
+<td style="text-align: left;"><strong>Laboratory for Atmospheric and
+Space Physics</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Postdocs</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2023–present: Dr. Harish</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022–present: Dr. Patrick O’Brien</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019–2020: Dr. Margaret Landis (now:
+faculty member, ASU)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Graduate Students</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2023–present: Heshani Pieris (APS Dept.,
+U. Colorado)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022–present: Robert Stevens (APS Dept.,
+U. Colorado)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2020–present: Kya Sorli (APS Dept., U.
+Colorado)   <span class="math inline"><sup>*</sup></span>NSF Fellow</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2020–2022: <strong>Noora Alsaeed,
+<em>Ph.D. | Dec. ‘22</em></strong> (APS Dept., U. Colorado)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2018–2022: <strong>Andrew Wilcoski,
+<em>Ph.D. | Dec. ‘22</em></strong> (APS Dept., U. Colorado)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019–2020: <strong>Raven Larson, <em>M.S.
+| May ‘20</em></strong> (APS Dept., U. Colorado)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Undergraduate Students</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2024–present: Maya Nussbaumer (APS Dept.,
+CU Boulder)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2024 (summer): Matthew Perkins (NASA
+Europa ICONS)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2023 (summer): Fahad Alawadhi (AES Dept.,
+CU Boulder)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2023 (summer): Alia Almansoori (U.
+Edinburgh)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2023 (summer): Tyler Jx Bellison (Fort
+Lewis College)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022–2024: Isabella Wise (APS Dept., CU
+Boulder)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2022–2023: Sam Aberbook (Physics Dept., CU
+Boulder)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2018–2021: Tara Tomlinson (CU Boulder,
+B.S. <span class="math inline">→</span> Dartmouth College, Ph.D.)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2019–2020: Shaelyn Raposa (CU Boulder,
+B.S. <span class="math inline">→</span> N. Ariz. U., Ph.D.)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2018–2019: Carlos Eytan Gary Bicas (CU
+Boulder, B.S. <span class="math inline">→</span> Stony Brook U.,
+Ph.D.)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2018–2019: Tyler Horvath (CU Boulder, B.S.
+<span class="math inline">→</span> UCLA, Ph.D.)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Caltech Summer Undergraduate
+Research Fellows (SURF)</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2017: James Haber (Cornell University,
+B.S. <span class="math inline">→</span> Purdue U., Ph.D.)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2015: L<span>é</span>a Bonnefoy (Cornell
+University, B.S. <span class="math inline">→</span> U. Arizona,
+Ph.D.)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2014: Clifford Watkins (Carleton College,
+B.S. <span class="math inline">→</span> U. Hawaii, Ph.D.)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2011: Michael Lauria (Caltech, B.S.)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Maximizing Student Potential
+(MSP)</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2015–2018: Jos<span>é</span>
+Mart<span>í</span>nez Camacho (Citrus College <span
+class="math inline">→</span> SMU, Ph.D.)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Caltech Postdoctoral Fellows at
+JPL</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2017–2018: Dr. Quentin Vinckier (now: JPL
+Technologist)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">2016–2018: Dr. Catherine M. Elder (now:
+JPL Scientist)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Invited</span></span></td>
+<td style="text-align: left;">   2025     National Academy of Sciences /
+U.S.-Africa Frontiers Symposium</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Invited</span></span></td>
+<td style="text-align: left;">   2024     L’Space / Arizona State
+University</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2023     Brown University
+(postponed)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2021     Purdue University</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2020     Planetary Science Decadal
+Survey</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2020     Observatoire de la Côte
+d’Azur</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2020     NASA Lunar Surface Science
+Workshop</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2019     University of California, Los
+Angeles</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2018     Applied Physics Laboratory,
+Johns Hopkins University</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2017     Lawrence Livermore National
+Laboratory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2017     University of Colorado,
+Boulder</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2016     Lunar &amp; Planetary
+Institute</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2016     Weizmann Institute of Science
+(Israel)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2015     International Space
+Exploration Coordination Group,</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2015     NASA Exploration Science
+Forum</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2015     University of California -
+Santa Cruz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2014     SETI Institute</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2013     Lunar &amp; Planetary
+Institute</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2012     California Institute of
+Technology</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   2012     NASA – Jet Propulsion
+Laboratory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Outreach</span></span></td>
+<td style="text-align: left;"><strong>CU Outreach Grant</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span style="color: darkgray">&amp;
+Public</span></span></td>
+<td style="text-align: left;"><em>Faculty Award Co-Recipient</em>,
+“Engaging Underserved Students with</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Engagement</span></span></td>
+<td style="text-align: left;">CU’s Cutting-edge Space Research"
+(2021–2022)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Ad Astra Academy</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Co-founder and Co-leader</em>,
+2015–present</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Brazil (2015, 2017), Kenya (2016),
+Colorado (2021, 2024)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">   Science and exploration program for
+underserved student populations</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span style="color: darkgray">Media
+Interviews</span></span></td>
+<td style="text-align: left;"><em>Space.com:</em> <a
+href="https://www.space.com/the-universe/mars/sunny-days-on-mars-come-with-a-weather-warning-dust-storms-ahead">Sunny
+days on Mars come with a weather warning</a> (Dec. 2024)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span style="color: darkgray">&amp;
+Popular Writing</span></span></td>
+<td style="text-align: left;">      Also reported in: <em>Forbes</em>
+and other media outlets</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>The Conversation:</em> <a
+href="https://theconversation.com/scientists-suspect-theres-ice-hiding-on-the-moon-and-a-host-of-missions-from-the-us-and-beyond-are-searching-for-it-216060">Scientists
+suspect there’s ice hiding on the Moon</a> (Nov. 2023)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">      Reprinted in: <em>5 Essential Reads
+on Modern Lunar Missions</em> (Dec. 2023)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Popular Science:</em> <a
+href="https://www.popsci.com/science/water-moon-first-map/">We finally
+have a detailed map of water on the moon</a> (Mar. 2023)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>The Atlantic:</em> <a
+href="https://www.theatlantic.com/science/archive/2023/01/mars-snow-evidence/672793/">It
+snows on Mars</a> (Jan. 2023)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Science Daily:</em> <a
+href="https://www.sciencedaily.com/releases/2022/07/220726160213.htm">...
+Sweater weather on the Moon</a> (Jul. 2022)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>The Conversation:</em> <a
+href="https://theconversation.com/a-rocket-crashes-into-the-moon-the-accidental-experiment-will-shed-light-on-the-physics-of-impacts-in-space-177977">A
+rocket crashes into the Moon</a> (Mar. 2022)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Space.com:</em> <a
+href="https://www.space.com/rocket-moon-crash-space-impact-physics-march-2022">How
+a rocket crash on the Moon will help impact physics</a> (Mar. 2022)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>CNN:</em> <a
+href="https://www.cnn.com/2022/05/27/world/ancient-moon-volcanoes-water-scn/index.html">Ancient
+volcanoes ... a rare resource for lunar explorers</a> (May 2022)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Wired:</em> <a
+href="https://www.wired.co.uk/article/mapping-moon-shadows">A clever way
+to map the Moon’s surface: using shadows</a> (Oct. 2022)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>The New York Times:</em> <a
+href="https://www.nytimes.com/2020/03/24/science/mercury-life-water.html">Life
+on the planet Mercury?</a> (Mar. 2020)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Smithsonian:</em> <a
+href="https://www.smithsonianmag.com/smart-news/moon-has-more-water-and-ice-hidden-its-surface-originally-predicted-180976146/">The
+Moon has more hidden water</a> (Oct 2020)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Popular Science:</em> <a
+href="https://www.popsci.com/science/article/2013-06/europa-fiction/">Europa
+is the new Mars</a> (Jun. 2013)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Quirks &amp; Quarks</em> (podcast
+interview):</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">    <a
+href="https://www.cbc.ca/radio/quirks/oct-31-wasps-make-cockroaches-into-zombies-water-on-the-moon-how-remoras-surf-whales-and-more-1.5781814/the-moon-s-a-wetter-place-than-we-thought-and-that-could-be-critical-for-exploration-1.5781834">The
+Moon’s a wetter place than we thought</a> (Oct. 2020)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>AirTalk</em> (radio interview):</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">    <a
+href="https://www.kpcc.org/show/airtalk/2020-10-27/studies-confirm-longstanding-theory-that-theres-water-on-the-moon-why-does-it-matter">Studies
+confirm longstanding theory that there’s water on the Moon</a> (Oct.
+2020)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Professional</span></span></td>
+<td style="text-align: left;">American Astronomical Society - Division
+for Planetary Sciences</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Affiliations</span></span></td>
+<td style="text-align: left;">American Geophysical Union</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">European Geosciences Union</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Asia Oceania Geosciences Society</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span><span
+style="color: darkgray">Skills</span></span></td>
+<td style="text-align: left;"><strong>Remote sensing &amp; spacecraft
+instrumentation,</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span><span style="color: darkgray">&amp;
+Training</span></span></td>
+<td style="text-align: left;"><strong>Modeling and numerical
+simulation</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Computer programming
+languages</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Proficient/expert:
+<span><code>C/C++, Python, MATLAB, IDL</code></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Familiar:
+<span><code>Fortran 90/95</code></span>, shell scripting, etc.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Mission formulation
+experience</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Team-X</em>, NASA Jet Propulsion
+Laboratory</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Team-A</em>, NASA Jet Propulsion
+Laboratory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Capture Lead Training</em>, NASA Jet
+Propulsion Laboratory</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Co-I and Deputy PI on mission proposals to
+NASA’s <em>Discovery</em> and <em>New Frontiers</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Successful PI on multiple instrument
+proposals to NASA mission programs</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Additional training</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>NASA Astrobiology Winter School and
+Field Course</em> (2011)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>International Astrobiology Summer
+School</em> (2008)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>PADI Open Water Diver</em> scuba
+certification (50+ dives)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><em>Eagle Scout</em> (1998), BSA Troop
+676, Issaquah, WA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+<span><span style="color: darkgray">Paul O. Hayne: Refereed Journal
+Articles</span></span></p>
+<p><strong>Number of peer-reviewed publications: 96</strong> (as of
+January, 2025)</p>
+<p>First-author: 10 / Student-supervised first-author: 14 /
+Postdoc-supervised first-author: 9</p>
+<p><em>h-index:</em> 31 (<a
+href="https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&amp;filter_author_facet_hier_fq_author=author_facet_hier%3A%220%2FHayne%2C%20P%22&amp;fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&amp;fq_author=(author_facet_hier%3A%220%2FHayne%2C%20P%22)&amp;q=%20author%3A%22Hayne%2C%20Paul%20O%22&amp;sort=date%20desc%2C%20bibcode%20desc/metrics">ADS</a>),
+35 (<a
+href="https://scholar.google.com/citations?hl=en&amp;user=kgXwvksAAAAJ">Google</a>
+Scholar)</p>
+<p><em>i100-index</em> (# papers cited <span
+class="math inline">≥</span> 100 times): 17 (6 as first-author)</p>
+<p>Total citations: 4,088 (ADS), 6,089 (Google Scholar)</p>
+<p>(<span class="math inline"><sup>*</sup></span>) indicates <span
+style="color: darkred">(U,G) student</span> or <span
+style="color: blue">(P) postdoc</span> supervised or co-supervised by
+Hayne</p>
+<p> <br />
+</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+style="color: darkgray">2024</span></td>
+<td style="text-align: left;"><ol>
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(G) Alsaeed, N. R.</span>,
+<strong>Hayne, P. O.</strong>, &amp; Concepcion, V. (2024), Seasonal and
+inter-annual variability in the polar vortex and snowfall on Mars,
+<em>J. Geophys. Res., 129</em>(12), e2024JE008397. </span></p></li>
+<li><p><span>Gallinger, C. L., Williams, J-P., Neish, C. D., Powell, T.
+M., Elder, C. M., Ghent, R. R., <strong>Hayne, P. O.</strong>, &amp;
+Paige, D. A. (2024), Thermophysical Diversity of Young Lunar Crater
+Ejecta Revealed with LRO Diviner Observations, <em>Planet. Sci. J.,
+5</em>(11), 261. </span></p></li>
+<li><p><span>O’Brien, P., Scully, J. E. C., <span
+style="color: blue"><span class="math inline"><sup>*</sup></span>(P)
+Landis, M. E.</span>, Schörghofer, N., <strong>Hayne, P. O.</strong>
+(2024), Enhancement of the Cerean Exosphere by Sublimation from Complex
+Craters, <em>Planet. Sci. J., 5</em>(9), 199. </span></p></li>
+<li><p><span>Cohen, B. A., Petersburg, R. R., Cremons, D. R., Russell,
+P. S., <strong>Hayne, P. O.</strong>, Greenhagen, B. T., Paige, D. A.,
+et al. (2024), Lunar Flashlight science ground and flight measurements
+and operations using a multi-band laser reflectometer, <em>Icarus,
+413</em>, 116013. </span></p></li>
+<li><p><span>Hoover, R. H., Robbins, S. J., Hynek, B. M., &amp;
+<strong>Hayne, P. O.</strong> (2024), Depth-to-diameter Ratios of Fresh
+Craters on the Moon and Implications for Surface Age Estimates,
+<em>Planet. Sci. J., 5</em>(1), 26. </span></p></li>
+<li><p><span><span style="color: blue"><span
+class="math inline"><sup>*</sup></span>(P) Landis, M. E.</span>, Dundas,
+C. M., McEwen, A. S., Daubar, I. J., <strong>Hayne, P. O.</strong>,
+Byrne, S., et al. (2024), New, dated small impacts on the South Polar
+Layered Deposits (SPLD), Mars, and implications for shallow subsurface
+properties, <em>Icarus</em>, 115977. </span></p></li>
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(U) Bürger, J.</span>,
+<strong>Hayne, P. O.</strong>, Gundlach, B., Läuter, M., Kramer, T.,
+&amp; Blum, J. (2024), A microphysical thermal model for the lunar
+regolith: Investigating the latitudinal dependence of regolith
+properties, <em>J. Geophys. Res., 129</em>(3), e2023JE008152.
+</span></p></li>
+<li><p><span>Daubar, I. J., Hayes, A. G., Collins, G. C., Craft, K. L.,
+Rathbun, J. A., Spencer, J. R., ... <strong>Hayne, P. O.</strong>, et
+al. (2024), Planned geological investigations of the Europa Clipper
+Mission, <em>Space Sci. Rev., 220</em>(1), 18. </span></p></li>
+<li><p><span>Piqueux, S., Kass, D. M., Kleinböhl, A., Slipski, M.,
+<strong>Hayne, P. O.</strong>, McCleese, D. J., Schofield, J. T., &amp;
+Heavens, N. (2024), Mars thermal inertia and surface temperatures by the
+Mars Climate Sounder, <em>Icarus, 419</em>, 115851. </span></p></li>
+<li><p><span>Christensen, P. R., Spencer, J. R., Mehall, G. L., Patel,
+M., ... <strong>Hayne, P. O.</strong>, et al. (2024), The Europa Thermal
+Emission Imaging System (E-THEMIS) Investigation for the Europa Clipper
+Mission, <em>Space Sci. Rev., 220</em>(4), 1-65. </span></p></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+style="color: darkgray">2023</span></td>
+<td style="text-align: left;"><ol start="11">
+<li><p><span><span style="color: blue"><span
+class="math inline"><sup>*</sup></span>(P) Burnett, E. R.</span>, &amp;
+<strong>Hayne, P. O.</strong> (2023) Spin-orbit coupling of Europa’s ice
+shell and interior, <em>Icarus, 406</em>, doi: <a
+href="https://doi.org/10.1016/j.icarus.2023.115731">10.1016/j.icarus.2023.115731</a>.
+</span></p></li>
+<li><p><span>Elder, C. M., Ghent, R. R., Haber, J., <strong>Hayne, P.
+O.</strong>, et al. (2023), The variability of lunar mare basalt
+properties from surface rock abundance, <em>Planet. Sci. J., 4</em>(12),
+244, doi: <a
+href="https://doi.org/10.3847/PSJ/ad06a8">10.3847/PSJ/ad06a8</a>.
+</span></p></li>
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(G) Wilcoski, A. X.</span>,
+<strong>Hayne, P. O.</strong>, &amp; Elder, C. M. (2023) Thermal
+environments and volatile stability within lunar pits and caves, <em>J.
+Geophys. Res.</em>, e2023JE007758. doi: <a
+href="https://doi.org/10.1029/2023JE007758">10.1029/2023JE007758</a>
+</span></p></li>
+<li><p><span>Osinski, G. R., Melosh, H. J., ..., <strong>Hayne, P.
+O.</strong>, et al. (2023), Lunar impact features and processes,
+<em>Reviews in Mineralogy and Geochemistry, 89</em>(1), 651–690, doi: <a
+href="https://doi.org/10.2138/rmg.2023.89.08">10.2138/rmg.2023.89.08</a>.
+</span></p></li>
+<li><p><span>Plescia, J. B., Cahill, J., ..., <strong>Hayne, P.
+O.</strong>, et al. (2023), Lunar surface processes, <em>Reviews in
+Mineralogy and Geochemistry, 89</em>(1), 651–690, doi: <a
+href="https://doi.org/10.2138/rmg.2023.89.15">10.2138/rmg.2023.89.15</a>.
+</span></p></li>
+<li><p><span>Hurley, D. M., Siegler, M. A., ..., <strong>Hayne, P.
+O.</strong>, et al. (2023), Surface volatiles on the Moon, <em>Reviews
+in Mineralogy and Geochemistry, 89</em>(1), 787–827, doi: <a
+href="https://doi.org/10.2138/rmg.2023.89.18">10.2138/rmg.2023.89.18</a>.
+</span></p></li>
+<li><p><span>Byron, B. D., Elder, C., ..., <strong>Hayne, P.
+O.</strong>, et al. (2023), Evidence for fine-grained material at lunar
+red spots: Insights from thermal infrared and radar data sets,
+<em>Planet. Sci. J., 4</em>(9), 182, doi: <a
+href="https://doi.org/10.3847/PSJ/acf134">10.3847/PSJ/acf134</a>.
+</span></p></li>
+<li><p><span>Hansen, C. J., Byrne, S., Calvin, W. M., Diniega, S.,
+Dundas, C. M., <strong>Hayne, P. O.</strong>, et al. (2023), A
+comparison of CO2 seasonal activity in Mars’ northern and southern
+hemispheres, <em>Icarus</em>, in press, doi: <a
+href="https://doi.org/10.1016/j.icarus.2023.115801">10.1016/j.icarus.2023.115801</a>
+</span></p></li>
+<li><p><span>Roberts, J. H., McKinnon, W. B., ..., <strong>Hayne, P.
+O.</strong>, et al. (2023), Exploring the interior of Europa with the
+Europa Clipper, <em>Space Sci. Rev., 219</em>(6), 46, doi: <a
+href="https://doi.org/10.1007/s11214-023-00990-y">10.1007/s11214-023-00990-y</a>.
+</span></p></li>
+<li><p><span>Maga<span>ñ</span>a, L. O., Retherford, K. D., ...,
+<strong>Hayne, P. O.</strong>, et al. (2023), LRO-LAMP lunar south pole
+cold traps: Assessment of H<span
+class="math inline"><sub>2</sub></span>O and potential CO<span
+class="math inline"><sub>2</sub></span> and NH<span
+class="math inline"><sub>3</sub></span> reserves, <em>J. Geophys. Res.,
+128</em>, 8, e2023JE007863, doi: <a
+href="https://doi.org/10.1029/2023JE007863">10.1029/2023JE007863</a>.
+</span></p></li>
+<li><p><span>Nesnas, I. A. D., Kerber, L., ..., <strong>Hayne,
+P.</strong>, et al. (2023), Moon Diver: Exploring a Pit’s exposed strata
+to understand lunar volcanism, <em>Acta Astronautica, 211</em>, 163–176,
+doi: <a
+href="https://doi.org/10.1016/j.actaastro.2023.05.042">10.1016/j.actaastro.2023.05.042</a>.
+</span></p></li>
+<li><p><span>Piqueux, S., <strong>Hayne, P. O.</strong>, Kleinböhl, A.,
+Kass, D. M., Schreier, M., McCleese, D. J., ... &amp; Shirley, J. H.
+(2023), Atmospheric CO<span class="math inline"><sub>2</sub></span>
+depletion near the surface in the martian polar regions, <span><em>J.
+Geophys. Res.</em></span>, e2022JE007386. doi: <a
+href=" https://doi.org/10.1029/2022JE007332">10.1029/2022JE007332</a>
+</span></p></li>
+<li><p><span>Powell, T. M., Horvath, T., Robles, V. L., Williams, J. P.,
+<strong>Hayne, P. O.</strong>, Gallinger, C. L., ... &amp; Paige, D. A.
+(2023), High‐resolution nighttime temperature and rock abundance mapping
+of the Moon using the Diviner Lunar Radiometer Experiment with a model
+for topographic removal, <span><em>J. Geophys. Res., 128</em></span>(2),
+e2022JE007532. doi: <a
+href="https://doi.org/10.1029/2022JE007532">10.1029/2022JE007532</a>
+</span></p></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+style="color: darkgray">2022</span></td>
+<td style="text-align: left;"><ol start="24">
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(G) Alsaeed, N. R.</span> &amp;
+<strong>Hayne, P. O.</strong> (2022), Transport of water into the polar
+regions of Mars through scavenging by CO<span
+class="math inline"><sub>2</sub></span> snowfall, <span><em>J. Geophys.
+Res.</em></span>, e2022JE007386. doi: <a
+href="https://doi.org/10.1029/2022JE007386">10.1029/2022JE007386</a>
+</span></p></li>
+<li><p><span>Bapst, J., Piqueux, S., Edwards, C. S., Wolfe, C.,
+<strong>Hayne, P. O.</strong>, Kass, D. M., &amp; Kleinböhl, A. (2022),
+Surface dust redistribution on Mars from interannual differences in
+temperature and albedo, <span><em>J. Geophys. Res.</em></span>,
+e2022JE007365. doi: <a
+href="https://doi.org/10.1029/2022JE007365">10.1029/2022JE007365</a>
+</span></p></li>
+<li><p><span>Magaña, L. O., Retherford, K. D., Byron, B. D., Hendrix, A.
+R., Grava, C., Mandt, K. E., Raut, U., Czajka, E., <strong>Hayne, P.
+O.</strong>, Hurley, D. M., Gladstone, G. R., Poston, M. J., Greathouse,
+T. K., Pryor, W., Cahill, J. T., &amp; Stickle, A. (2022), LRO‐LAMP
+survey of lunar south pole cold traps: implication for the presence of
+condensed H<span class="math inline"><sub>2</sub></span>O, <span><em>J.
+Geophys. Res.</em></span>, e2022JE007301. doi: <a
+href="https://doi.org/10.1029/2022JE007301">10.1029/2022JE007301</a>
+</span></p></li>
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(U) Horvath, T.</span>,
+<strong>Hayne, P. O.</strong>, &amp; Paige, D. A. (2022), Thermal and
+illumination environments of lunar pits and caves: models and
+observations from the Diviner Lunar Radiometer Experiment,
+<span><em>Geophys. Res. Lett.</em></span>, e2022GL099710. doi: <a
+href="https://doi.org/10.1029/2022GL099710">10.1029/2022GL099710</a>
+</span></p></li>
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(U) Tomlinson, T. C.</span> &amp;
+<strong>Hayne, P. O.</strong> (2022), Composition and possible origins
+of dark crater ejecta on Europa, <span><em>Icarus</em></span>, 115037.
+doi: <a
+href="https://doi.org/10.1016/j.icarus.2022.115037">10.1016/j.icarus.2022.115037</a>
+</span></p></li>
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(U) Innanen</span>, A. C.,
+Landis, M. E., <strong>Hayne, P. O.</strong>, &amp; Moores, J. E.
+(2022), Possible atmospheric water vapor contribution from Martian Swiss
+cheese terrain, <span><em>Planet. Sci. J., 3</em></span>. doi: <a
+href="https://doi.org/10.3847/PSJ/ac979e">10.3847/PSJ/ac979e</a>
+</span></p></li>
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(G) Wilcoski, A. X.</span> &amp;
+<strong>Hayne, P. O.</strong>, &amp; Landis, M. E. (2022), Polar ice
+accumulation from volcanically induced transient atmospheres on the
+Moon, <span><em>The Planetary Science Journal, 3</em></span>(5), 99.
+doi: <a href="https://doi.org/10.3847/PSJ/ac649c">10.3847/PSJ/ac649c</a>
+</span></p></li>
+<li><p><span>Williams, J. P., Pathare, A. V., Costello, E. S.,
+Gallinger, C. L., <strong>Hayne, P. O.</strong>, et al. (2022), The
+effects of terrain properties upon the small crater population
+distribution at Giordano Bruno: implications for lunar chronology,
+<span><em>Journal of Geophysical Research</em></span>, e2021JE007131.
+doi: <a
+href="https://doi.org/10.1029/2021JE007131">10.1029/2021JE007131</a>
+</span></p></li>
+<li><p><span><span style="color: blue"><span
+class="math inline"><sup>*</sup></span>(P) Landis, M. E.</span>,
+<strong>Hayne, P. O.</strong>, Williams, J. P., Greenhagen, B. T., &amp;
+Paige, D. A. (2022), Spatial distribution and thermal diversity of
+surface volatile cold traps at the lunar poles, <span><em>The Planetary
+Science Journal 3</em> </span>(2), 39. doi: <a
+href="https://doi.org/10.3847/PSJ/ac4585">10.3847/PSJ/ac4585</a>
+</span></p></li>
+<li><p><span><span style="color: blue"><span
+class="math inline"><sup>*</sup></span>(P) Landis, M. E.</span>,
+Castillo-Rogez, J. C., <strong>Hayne, P. O.</strong>, et al. (2022), The
+case for a Themis asteroid family spacecraft mission,
+<span><em>Planetary and Space Science 212</em></span>, 105413. doi: <a
+href="https://doi.org/10.1016/j.pss.2021.105413">10.1016/j.pss.2021.105413</a>
+</span></p></li>
+<li><p><span>Williams, J. P., Greenhagen, B. T., ..., <strong>Hayne, P.
+O.</strong>, &amp; Sullivan, M. T. (2022), Temperatures of the Lacus
+Mortis region of the Moon, <span><em>Earth and Space
+Science</em></span>, 9(2). doi: <a
+href="https://doi.org/10.1029/2021EA001966">10.1029/2021EA001966</a>
+</span></p></li>
+<li><p><span>Byron, B. D., Elder, C. M., Williams, J‐P., Ghent, R. R.,
+Gallinger, C. L., <strong>Hayne, P. O.</strong>, &amp; Paige, D. A.
+(2022), Thermophysical properties of lunar irregular mare patches from
+LRO Diviner Radiometer data, <span><em>J. Geophys. Res.</em></span>,
+e2022JE007214. doi: <a
+href="https://doi.org/10.1029/2022JE007214">10.1029/2022JE007214</a>
+</span></p></li>
+<li><p><span>Lucey, P. G., Petro, N., ..., <strong>Hayne, P.
+O.</strong>, et al. (2022), Volatile interactions with the lunar
+surface, <span><em>Geochemistry</em></span>, 125858. doi: <a
+href="https://doi.org/10.1016/j.chemer.2021.125858">10.1016/j.chemer.2021.125858</a>
+</span></p></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+style="color: darkgray">2021</span></td>
+<td style="text-align: left;"><ol start="37">
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(G) Burnett, E. R.</span> &amp;
+<strong>Hayne, P. O.</strong> (2021), Europa’s hemispheric color
+dichotomy as a constraint on non-synchronous rotation,
+<span><em>Icarus</em></span>, 364. doi: <a
+href="https://doi.org/10.1016/j.icarus.2021.114438">10.1016/j.icarus.2021.114438</a>
+</span></p></li>
+<li><p><span><strong>Hayne, P. O.</strong>, Aharonson, O., &amp;
+Schörghofer, N. (2021), Micro cold traps on the Moon, <span><em>Nature
+Astron.</em></span>, 1-7. doi: <a
+href="https://doi.org/10.1038/s41550-020-1198-9">10.1038/s41550-020-1198-9</a>
+</span></p></li>
+<li><p><span>Lucey, P. G., <strong>Hayne, P. O.</strong>, Costello, E.
+S., Green, R., Hibbitts, C. A., Goldberg, A., ... &amp; Honniball, C.
+(2021), The spectral radiance of indirectly illuminated surfaces in
+regions of permanent shadow on the Moon, <em>Acta Astronautica,
+180</em>, 25-34. doi: <a
+href="https://doi.org/10.1016/j.actaastro.2020.11.032">10.1016/j.actaastro.2020.11.032</a>
+</span></p></li>
+<li><p><span>Wu, Y., ..., &amp; <strong>Hayne, P. O.</strong> (2021),
+Chang’E-4 rover spectra revealing micro-scale surface thermophysical
+properties of the Moon, <span><em>Geophys. Res. Lett.</em></span>, 48,
+4. e2020GL089226. </span></p></li>
+<li><p><span>Ahrens, C. J., Paige, D. A., Eubanks, T. M., Blase, W. P.,
+Mesick, K. E., Zimmerman, W., Petro, N., <strong>Hayne, P. O.</strong>,
+&amp; Price, S. (2021), Small penetrator instrument concept for hte
+advancement of lunar surface science, <span><em>Planet. Sci.
+J.</em></span>, 2(1), p. 38. </span></p></li>
+<li><p><span>Avdellidou, C., Munaibari, E., <span
+style="color: darkred"><span class="math inline"><sup>*</sup></span>(G)
+Larson, R.</span>, ... <strong>Hayne, P. O.</strong>, et al. (2021),
+Impacts on the Moon: analysis methods and size distribution of
+impactors, <span><em>Planet. &amp; Space Sci.</em></span>, 200.
+</span></p></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span
+style="color: darkgray">2020</span></td>
+<td style="text-align: left;"><ol start="43">
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(G) Wilcoski, A. X.</span> &amp;
+<strong>Hayne, P. O.</strong> (2020), Surface roughness evolution and
+implications for the age of the North Polar Residual Cap of Mars, <em>J.
+Geophys. Res., 125</em>(12), e2020JE006570. </span></p></li>
+<li><p><span><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(U) Gary-Bicas, C. E.</span>,
+<strong>Hayne, P. O.</strong>, <span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(U) Horvath, T.</span>, Heavens,
+N. G., Kass, D. M., Kleinböhl, A., Piqueux, S., Shirley, J., &amp;
+McCleese, D. J. (2020), Asymmetries in snowfall, emissivity and albedo
+of Mars’ seasonal polar caps: Mars Climate Sounder observations.
+<span><em>J. Geophys. Res., 125</em></span>(5), e2019JE006150.
+</span></p></li>
+<li><p><span>Feng, J., Siegler, M. A., &amp; <strong>Hayne, P.
+O.</strong> (2020), New constraints on thermal and dielectric properties
+of lunar regolith from LRO Diviner and CE‐2 Microwave Radiometer, <em>J.
+Geophys. Res., 125</em>(1), e2019JE006130. </span></p></li>
+<li><p><span>Siegler, M. A., Feng, J., Lucey, P. G., Ghent, R. R.,
+<strong>Hayne, P. O.</strong>, &amp; White, M. N. (2020), Lunar titanium
+and frequency dependent microwave loss tangent as constrained by the
+Chang’E‐2 MRM and LRO Diviner Lunar Radiometers, <em>J. Geophys.
+Res.</em>, e2020JE006405. </span></p></li>
+<li><p><span>Cohen, B. A., <strong>Hayne, P. O.</strong>, Greenhagen,
+B., Paige, D. A., Seybold, C., &amp; Baker, J. (2020), Lunar Flashlight:
+illuminating the lunar south pole, <span><em>IEEE Aerospace and
+Electronic Systems, 35</em></span>(3), 46-52. </span></p></li>
+<li><p><span>Smith, I. B., <strong>Hayne, P. O.</strong>, Byrne, S.,
+Becerra, P., Kahre, M., Calvin, W., ... &amp; Horgan, B. (2020), The
+Holy Grail: A road map for unlocking the climate record stored within
+Mars’ polar layered deposits, <span><em>Planet. Space Sci.,
+184</em></span>, 104841. </span></p></li>
+<li><p><span>Lyra, W., ... <strong>Hayne, P. O.</strong>, &amp; Marlow,
+J. (2020), Ad Astra Academy: Using Space Exploration to Promote Student
+Learning and Motivation in the City of God, Rio De Janeiro, Brazil,
+<em>Comm. Astron. with the Public, 27</em>, 5–13. </span></p></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+style="color: darkgray">2019</span></td>
+<td style="text-align: left;"><ol start="50">
+<li><p><span>Buhler, P. B., Ingersoll, A. P., Piqueux, S., Ehlmann, B.
+E., <strong>Hayne, P. O.</strong> (2019), Coevolution of Mars’s
+atmosphere and massive south polar CO<span
+class="math inline"><sub>2</sub></span> ice deposit. <em>Nature Astron.,
+4</em>(4), 364-371. doi: <a
+href="https://doi.org/10.1038/s41550-019-0976-8">10.1038/s41550-019-0976-8</a>
+</span></p></li>
+<li><p><span><span style="color: blue"><span
+class="math inline"><sup>*</sup></span>(P) Hofgartner, J. D.</span>,
+Buratti, B. J., <strong>Hayne, P. O.</strong>, Young, L. A. (2019),
+Ongoing resurfacing of KBO Eris by volatile transport in local,
+collisional, sublimation atmosphere regime. <span><em>Icarus,
+334</em></span>, 52–61. doi: <a
+href="https://doi.org/10.1016/j.icarus.2018.10.028">10.1016/j.icarus.2018.10.028</a>
+</span></p></li>
+<li><p><span>Piqueux, S., ..., <strong>Hayne, P. O.</strong> (2019),
+Widespread shallow water ice on Mars at high latitudes and midlatitudes.
+<span><em>Geophys. Res. Lett., 46</em></span>, 14,290–14,298. doi: <a
+href="https://doi.org/10.1029/2019GL083947">10.1029/2019GL083947</a></span></p></li>
+<li><p><span>Farrell, W. M., Hurley, D. M., Poston, M. J.,
+<strong>Hayne, P. O.</strong>, Szalay, J. R., &amp; McLain, J. L.
+(2019), The young age of the LAMP‐observed frost in lunar polar cold
+traps. <span><em>Geophys. Res. Lett.</em></span>, in press. doi: <a
+href="https://doi.org/10.1029/2019GL083158">10.1029/2019GL083158</a>
+</span></p></li>
+<li><p><span>Sefton-Nash, E., Williams, J. P., Greenhagen, B. T.,
+Warren, T. J., Bandfield, J. L., Aye, K. M., Leader, F., Siegler, M. A.,
+<strong>Hayne, P. O.</strong>, &amp; Paige, D. A. (2019), Evidence for
+ultra-cold traps and surface water ice in the lunar south polar crater
+Amundsen. <span><em>Icarus, 332</em></span>, 1-13. doi: <a
+href="https://doi.org/10.1016/j.icarus.2019.06.002">10.1016/j.icarus.2019.06.002</a>
+</span></p></li>
+<li><p><span>Hendrix, A. R., Hurley, D. M., Farrell, W. M., Greenhagen,
+B. T., <strong>Hayne, P. O.</strong>, Retherford, K. D., ... &amp; Liu,
+Y. (2019), Diurnally migrating lunar water: evidence from ultraviolet
+data, <span><em>Geophys. Res. Lett., 46</em></span>(5), 2417-2424. doi:
+<a href="https://doi.org/10.1029/2018GL081821">10.1029/2018GL081821</a>
+</span></p></li>
+<li><p><span>Jordan, A. P., Stubbs, T. J., Shusterman, M. L., Izenberg,
+N. R., Wilson, J. K., <strong>Hayne, P. O.</strong>, ... &amp; Spence,
+H. E. (2019), How dielectric breakdown may contribute to the global
+weathering of regolith on the moon, <span><em>Icarus, 319</em></span>,
+785-794. doi: <a
+href="https://doi.org/10.1016/j.icarus.2018.10.025">10.1016/j.icarus.2018.10.025</a>
+</span></p></li>
+<li><p><span>Bapst, J., Byrne, S., Bandfield, J. L., &amp;
+<strong>Hayne, P. O.</strong> (2019), Thermophysical properties of the
+north polar residual cap using MGS TES, <span><em>J. Geophys.
+Res.</em></span>, in press. doi: <a
+href="https://doi.org/10.1029/2018JE005786">10.1029/2018JE005786</a>
+</span></p></li>
+<li><p><span><span style="color: blue"><span
+class="math inline"><sup>*</sup></span>(P) Vinckier, Q.</span>, Hardy,
+L., Gibson, M., Smith, C., Putman, P., <strong>Hayne, P. O.</strong>,
+&amp; Sellar, R. G. (2019), Design and characterization of the
+multi-band SWIR receiver for the Lunar Flashlight CubeSat Mission,
+<span><em>Remote Sensing, 11</em></span>(4), 440. doi: <a
+href="https://doi.org/10.3390/rs11040440">10.3390/rs11040440</a>
+</span></p></li>
+<li><p><span>Landis, M. E., Byrne, S., Combe, J. P., Marchi, S.,
+Castillo‐Rogez, J., Sizemore, H. G., Sch<span>ö</span>rghofer, N.,
+Prettyman, T. H., <strong>Hayne, P. O.</strong>, Raymond, C. A., &amp;
+Russell, C. T. (2019), Water vapor contribution to Ceres’ exosphere from
+observed surface ice and postulated ice‐exposing impacts, <span><em>J.
+Geophys. Res., 124</em></span>(1), 61-75. </span></p></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+style="color: darkgray">2018</span></td>
+<td style="text-align: left;"><ol start="60">
+<li><p><span>Williams, J-P., Bandfield, J. L., Paige, D. A., Powell, T.
+M., Greenhagen, B. T., Taylor, S., <strong>Hayne, P. O.</strong>,
+Speyerer, E. J., Ghent, R. R., &amp; Costello, E. S. (2018), Lunar cold
+spots and crater production on the Moon, <em>Journal of Geophysical
+Research: Planets, 123</em> (9), 2380–2392. doi: <a
+href="https://doi.org/10.1029/2018JE005652">10.1029/2018JE005652</a>.
+</span></p></li>
+<li><p><span>Heavens, N. G., Kleinb<span>ö</span>hl, A., Chaffin, M. S.,
+Halekas, J. S., Kass, D. M., <strong>Hayne, P. O.</strong>, McCleese, D.
+J., Piqueux, S., Shirley, J. H., &amp; Schofield, J. T. (2018), Hydrogen
+escape from Mars enhanced by deep convection in dust storms, <em>Nature
+Astronomy, 2</em>, 126–132. doi: <a
+href="https://doi.org/10.1038/s41550-017-0353-4">10.1038/s41550-017-0353-4</a>.
+</span></p></li>
+<li><p><span>Li, S., Lucey, P. G., Milliken, R. E., <strong>Hayne, P.
+O.</strong>, Fisher, E., Williams, J-P., Hurley, D. M., Elphic, R. C.
+(2018), Direct evidence of surface exposed water ice in the lunar polar
+regions, <em>Proceedings of the National Academy of Sciences, 115</em>
+(36), 8907–8912. doi: <a
+href="https://doi.org/10.1073/pnas.1802345115">10.1073/pnas.1802345115</a>.
+</span></p></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><div class="center">
+<p><em>Prior to CU Boulder</em></p>
+</div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+style="color: darkgray">2017</span></td>
+<td style="text-align: left;"><div class="enumerate">
+<p><span><strong>Hayne, P. O.</strong></span>, Bandfield, J. L.,
+Siegler, M. A., Vasavada, A. R., Ghent, R. R., et al. (2017), Global
+regolith thermophysical properties of the Moon from the Diviner Lunar
+Radiometer Experiment, <em>J. Geophys. Res., 122</em>, 2371–2400. doi:
+<a
+href="https://doi.org/10.1002/2017JE005387">10.1002/2017JE005387</a></p>
+<p><span style="color: blue"><span
+class="math inline"><sup>*</sup></span>(P) Elder, C. M.</span>,
+<span><strong>Hayne, P. O.</strong></span>, Bandfield, J. L., Ghent, R.
+R., Williams, J.-P., Donaldson Hanna, K. L., &amp; Paige, D. A. (2017),
+Young lunar volcanic Features: Thermophysical properties and formation,
+<em>Icarus, 290</em>, 224–237. doi: <a
+href="https://doi.org/10.1016/j.icarus.2017.03.004">10.1016/j.icarus.2017.03.004</a></p>
+<p>Mitri, G., Postberg, F., Soderblom, J. M., ..., <strong>Hayne, P.
+O.</strong>, et al. (2017), Explorer of Enceladus and Titan (E<span
+class="math inline"><sup>2</sup></span>T): Investigating ocean worlds’
+evolution and habitability in the solar system, <em>Planetary and Space
+Science</em>, doi: <a
+href="https://doi.org/10.1016/j.pss.2017.11.001">10.1016/j.pss.2017.11.001</a></p>
+<p>Landis, M. E., Byrne, S., Schörghofer, N., Schmidt, B. E.,
+<strong>Hayne, P. O.</strong>, Castillo-Rogez, J., … Russell, C. T.
+(2017), Conditions for sublimating water ice to supply Ceres’ exosphere,
+<em>J. Geophys. Res., 122</em>, 1984–1995. doi: <a
+href="https://doi.org/10.1002/2017JE005335">10.1002/2017JE005335</a></p>
+<p>Davies, A. G., Gunapala, S., Soibel, A., Ting, D., Rafol, S.,
+Blackwell, M., <strong>Hayne, P. O.</strong>, &amp; Kelly, M. (2017), A
+novel technology for measuring the eruption temperature of silicate
+lavas with remote sensing: Application to Io and other planets, <em>J.
+Volcanology &amp; Geothermal Res., 343</em>, 1–16. doi: <a
+href="http://dx.doi.org/10.1016/j.jvolgeores.2017.04.016">10.1016/j.jvolgeores.2017.04.016</a></p>
+<p>Fisher, E. A., Lucey, P. G., Lemelin, M., Greenhagen, B. T., Siegler,
+M. A., Mazarico, E., Aharonson, O., Williams, J-P., <strong>Hayne, P.
+O.</strong>, Neumann, G. A., Paige, D. A., Smith, D. E., &amp; Zuber, M.
+T. (2017), Evidence for surface water ice in the lunar polar regions
+using reflectance measurements from the Lunar Orbiter Laser Altimeter
+and temperature measurements from the Diviner Lunar Radiometer
+Experiment, <em>Icarus, 292</em>, 74–85. doi: <a
+href="https://doi.org/10.1016/j.icarus.2017.03.023">10.1016/j.icarus.2017.03.023</a></p>
+</div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+style="color: darkgray">2016</span></td>
+<td style="text-align: left;"><div class="enumerate">
+<p>Piqueux, S., Kleinb<span>ö</span>hl, A., <span><strong>Hayne, P.
+O.</strong></span>, Heavens, N. G., Kass, D. M., McCleese, D. J., ...
+&amp; Shirley, J. H. (2016), Discovery of a widespread low–latitude
+diurnal CO<span class="math inline"><sub>2</sub></span> frost cycle on
+Mars, <span><em>J. Geophys. Res., 121</em></span>, 1174-118. doi: <a
+href="https://doi.org/10.1002/2016JE005034">10.1002/2016JE005034</a></p>
+<p>Greenhagen, B. T., Neish, C. D., Williams, J. P., Cahill, J. T.,
+Ghent, R. R., <span><strong>Hayne, P. O.</strong></span>, ... &amp;
+Bandfield, J. L. (2016), Origin of the anomalously rocky appearance of
+Tsiolkovskiy crater, <span><em>Icarus, 273</em></span>, 237–247. doi: <a
+href="https://doi.org/10.1016/j.icarus.2016.02.041">10.1016/j.icarus.2016.02.041</a></p>
+<p>Bennett, K. A., Horgan, B. H., Gaddis, L. R., Greenhagen, B. T.,
+Allen, C. C., <span><strong>Hayne, P. O.</strong></span>, ... &amp;
+Paige, D. A. (2016), Complex explosive volcanic activity on the Moon
+within Oppenheimer crater, <span><em>Icarus, 273</em></span>, 296–314.
+doi: <a
+href="https://doi.org/10.1016/j.icarus.2016.02.007">10.1016/j.icarus.2016.02.007</a></p>
+<p><span style="color: darkred"><span
+class="math inline"><sup>*</sup></span>(U) Bonnefoy, L. E.</span>, A. G.
+Hayes, <span><strong>P. O. Hayne</strong></span>, et al. (2015),
+Compositional and spatial variations in Titan dune and interdune regions
+from Cassini VIMS and RADAR, <span><em>Icarus, 270</em></span>, 222–237,
+doi:<a
+href="https://doi.org/10.1016/j.icarus.2015.09.014">10.1016/j.icarus.2015.09.014</a></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+style="color: darkgray">2015</span></td>
+<td style="text-align: left;"><div class="enumerate">
+<p><span><strong>Hayne, P. O.</strong></span>, and Oded Aharonson
+(2015), Thermal stability of ice on Ceres with rough topography,
+<span><em>J. Geophys. Res., 120</em></span>, 1567–1584, doi: <a
+href="https://doi.org/10.1002/2015JE004887">10.1002/2015JE004887</a></p>
+<p>Heavens, N. G., Cantor, B. A., <span><strong>Hayne, P.
+O.</strong></span>, et al. (2015), Extreme detached dust layers near
+Martian volcanoes: Evidence for dust transport by mesoscale circulations
+forced by high topography, <span><em>Geophys. Res. Lett.,
+42</em></span>, 10, 3730–3738. doi: <a
+href="https://doi.org/10.1002/2015GL064004">10.1002/2015GL064004</a></p>
+<p><span><strong>Hayne, P. O.</strong></span>, A. R. Hendrix, E.
+Sefton-Nash, P. G. Lucey, K. D. Retherford, J-P. Williams, et al.
+(2015), Evidence for exposed water ice in the Moon’s south polar regions
+from Lunar Reconnaissance Orbiter ultraviolet albedo and temperature
+measurements, <span><em>Icarus, 255</em></span>, 58–69, doi:<a
+href="https://doi.org/10.1016/j.icarus.2015.03.032">10.1016/j.icarus.2015.03.032</a></p>
+<p>Glotch, T. D., Bandfield, J. L., Lucey, P. G., <span><strong>Hayne,
+P. O.</strong></span>, et al. (2015), Formation of lunar swirls by
+magnetic field standoff of the solar wind, <span><em>Nature
+Communications, 6</em></span>. doi: <a
+href="https://doi.org/10.1038/ncomms7189">10.1038/ncomms7189</a></p>
+<p>Piqueux, S., Kleinb<span>ö</span>hl, A., <span><strong>Hayne, P.
+O.</strong></span>, Kass, D. M., Schofield, J. T., &amp; McCleese, D. J.
+(2015), Variability of the Martian seasonal CO2 cap extent over eight
+Mars Years, <span><em>Icarus</em></span>, doi:<a
+href="https://doi.org/10.1016/j.icarus.2014.10.045">10.1016/j.icarus.2014.10.045</a></p>
+<p>Bandfield, J. L., <span><strong>Hayne, P. O.</strong></span>,
+Williams, J. P., Greenhagen, B. T., &amp; Paige, D. A. (2015), Lunar
+surface roughness derived from LRO Diviner Radiometer observations,
+<span><em>Icarus, 248</em></span>, 357–372. doi: <a
+href="https://doi.org/10.1016/j.icarus.2014.11.009">10.1016/j.icarus.2014.11.009</a></p>
+</div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+style="color: darkgray">2014</span></td>
+<td style="text-align: left;"><div class="enumerate">
+<p><span><strong>Hayne, P. O.</strong></span>, McCord, T. B., &amp;
+Sotin, C. (2014), Titan’s surface composition and atmospheric
+transmission with solar occultation measurements by Cassini VIMS,
+<span><em>Icarus, 243</em></span>, 158–172. doi: <a
+href="https://doi.org/10.1016/j.icarus.2014.08.045">10.1016/j.icarus.2014.08.045</a></p>
+<p><span><strong>Hayne, P. O.</strong></span>, D. A. Paige, N. G.
+Heavens (2014), The role of snowfall in forming the seasonal ice caps of
+Mars: Models and constraints from the Mars Climate Sounder,
+<span><em>Icarus 231</em></span>, 122–130. doi: <a
+href="https://doi.org/10.1016/j.icarus.2013.10.020">10.1016/j.icarus.2013.10.020</a></p>
+<p>Ghent, R. R., <span><strong>Hayne, P. O.</strong></span>, Bandfield,
+J. L., Campbell, B. A., Allen, C. C., Carter, L. M., &amp; Paige, D. A.
+(2014), Constraints on the recent rate of lunar ejecta breakdown and
+implications for crater ages, <span><em>Geology, 42</em></span>(12),
+1059–1062. doi: <a
+href="https://doi.org/10.1130/G35926.1">10.1130/G35926.1</a></p>
+<p>Bandfield, J. L., E. Song, <span><strong>P. O. Hayne</strong></span>,
+B. D. Brand, R. R. Ghent, A. R. Vasavada, D. A. Paige (2014), Lunar cold
+spots: Granular flow features and extensive insulating materials
+surrounding young craters, <span><em>Icarus 231</em></span>, 221–231.
+doi: <a
+href="https://doi.org/10.1016/j.icarus.2013.12.017">10.1016/j.icarus.2013.12.017</a></p>
+<p>Ingersoll, R. V., Pratt, M. J., Davis, P. M., Caracciolo, L., Day, P.
+P., <span><strong>Hayne, P. O.</strong></span>, ... &amp; Hendrix, E. D.
+(2014), Paleotectonics of a complex Miocene half graben formed above a
+detachment fault: The Diligencia basin, Orocopia Mountains, southern
+California, <span><em>Lithosphere, 6</em></span>(3), 157–176. doi: <a
+href="https://doi.org/10.1130/L334.1">10.1130/L334.1</a></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+style="color: darkgray">2013</span></td>
+<td style="text-align: left;"><div class="enumerate">
+<p>Barnes, J. W., B. J. Buratti, E. P. Turtle, J. Bow, P. A. Dalba, J.
+Perry, R. H. Brown, S. Rodriguez, S. Le Mouelic, K. H. Baines, C. Sotin,
+R. D. Lorenz, M. J. Malaska, T. B. McCord, R. N. Clark, R. Jaumann,
+<span><strong>P. O. Hayne</strong></span>, et al. (2013),
+Precipitation-Induced Surface Brightenings Seen on Titan by Cassini VIMS
+and ISS, <span><em>Planetary Science, 2</em></span>, p. 1. doi: <a
+href="https://doi.org/10.1186/2191-2521-2-1">10.1186/2191-2521-2-1</a></p>
+</div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+style="color: darkgray">2012</span></td>
+<td style="text-align: left;"><div class="enumerate">
+<p><span><strong>Hayne, P. O.</strong></span>, D. A. Paige, J. T.
+Schofield, D. M. Kass, A. Kleinb<span>ö</span>hl, N. G. Heavens, and D.
+J. McCleese (2012), Carbon dioxide snow clouds on Mars: South polar
+winter observations by the Mars Climate Sounder, <span><em>J. Geophys.
+Res., 117</em></span>, E08014, doi: <a
+href="https://doi.org/10.1029/2011JE004040">10.1029/2011JE004040</a></p>
+<p>Vasavada, A. R., J. L. Bandfield, B. T. Greenhagen, <span><strong>P.
+O. Hayne</strong></span>, et al. (2012), Lunar Equatorial Surface
+Temperatures and Regolith Properties from the Diviner Lunar Radiometer
+Experiment, <span><em>J. Geophys. Res. 117</em></span>, E00H18. doi: <a
+href="https://doi.org/10.1029/2011JE003987">10.1029/2011JE003987</a></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+style="color: darkgray">2010</span></td>
+<td style="text-align: left;"><div class="enumerate">
+<p><span><strong>Hayne, P. O.</strong></span>, B. T. Greenhagen, M. C.
+Foote, M. A. Siegler, A. R. Vasavada, and D. A. Paige (2010), Diviner
+Lunar Radiometer Observations of the LCROSS Impact, <span><em>Science,
+330</em></span>, 477. doi: <a
+href="https://doi.org/10.1126/science.1197135">10.1126/science.1197135</a></p>
+<p>Paige, D. A., M. A. Siegler, J. A. Zhang, <span><strong>P. O.
+Hayne</strong></span>, et al. (2010), Diviner Observations of Cold Traps
+in the Lunar South Polar Region: Spatial Distribution and Temperature,
+<span><em>Science 330</em></span>, 479. doi: <a
+href="https://doi.org/10.1126/science.1187726">10.1126/science.1187726</a></p>
+<p>Greenhagen, B. T., P. G. Lucey, M. B. Wyatt, T. D. Glotch, C. C.
+Allen, J. A. Arnold, J. L. Bandfield, N. E. Bowles, K. L. Hanna,
+<span><strong>P. O. Hayne</strong></span>, E. Song, I. R. Thomas, and D.
+A. Paige (2010), Global Silicate Mineralogy of the Moon from the Diviner
+Lunar Radiometer, <span><em>Science 329</em></span>, 1507. doi: <a
+href="https://doi.org/10.1126/science.1192196">10.1126/science.1192196</a></p>
+<p>McCord, T. B., Hansen, G. B., Combe, J-P., &amp; <span><strong>P. O.
+Hayne</strong></span> (2010), Hydrated minerals on Europa’s surface: An
+improved look from the Galileo NIMS investigation, <span><em>Icarus
+209</em></span>, 639–650. doi: <a
+href="https://doi.org/10.1016/j.icarus.2010.05.026">10.1016/j.icarus.2010.05.026</a></p>
+</div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+style="color: darkgray">2009</span></td>
+<td style="text-align: left;"><div class="enumerate">
+<p>Barnes, J. W., ..., <span><strong>P. O. Hayne</strong></span>, et al.
+(2009), VIMS Spectral Mapping Observations of Titan during the Cassini
+Prime Mission, <span><em>Planet. and Space Sci., 57</em></span>,
+1950–1962. doi: <a
+href="https://doi.org/10.1016/j.pss.2009.04.013">10.1016/j.pss.2009.04.013</a></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+style="color: darkgray">2008</span></td>
+<td style="text-align: left;"><div class="enumerate">
+<p>McCord, T. B., <span><strong>P. Hayne</strong></span>, et al. (2008),
+Titan’s surface: Search for spectral diversity and composition using the
+Cassini VIMS investigation, <span><em>Icarus, 194</em></span>, 212–242.
+doi: <a
+href="https://doi.org/10.1016/j.icarus.2007.08.039">10.1016/j.icarus.2007.08.039</a></p>
+</div></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<div class="enumerate">
+<p>Smith, I. B., Byrne, S., <span><strong>Hayne, P. O.</strong></span>,
+&amp; 34 co-authors (2018), “Unlocking the Climate Record Stored in
+Mars’ Polar Layered Deposits,” <span><em>Keck Institute for Space
+Studies Report</em></span>. <a
+href="http://kiss.caltech.edu/final_reports/Polar_Final_Report.pdf"><code>[PDF]</code></a></p>
+<p>Aharonson, O., A. Hayes, <span><strong>P. O. Hayne</strong></span>,
+R. Lopes, A. Lucas, J. T. Perron, (2012), Titan’s Surface Geology, in:
+C. G. Mueller-Wodarg, T. Cravens and E. Lellouch (Ed.), <span><em><a
+href="http://www.cambridge.org/us/academic/subjects/physics/computational-science-and-modelling/titan-interior-surface-atmosphere-and-space-environment?format=HB#KJpk8zYpjXmsJDf4.97">Titan:
+Surface, Atmosphere and Magnetosphere</a></em></span>, Cambridge
+University Press, Cambridge, UK.</p>
+<p><span><strong>Hayne, P. O.</strong></span>, A. P. Ingersoll, D. A.
+Paige, &amp; 32 co-authors (2014), “New approaches to lunar ice
+detection and mapping,” <span><em>Keck Institute for Space Studies
+Report</em></span>. <a
+href="http://kiss.caltech.edu/study/lunar-ice/KISS_lunar_report.pdf"><code>[PDF]</code></a></p>
+</div>
+<div class="enumerate">
+<p><span><strong>Hayne, P. O.</strong></span> (2013), Abandoned
+frontier, <span><em>Nature Geosci., 6(3)</em></span>, 155-156. doi: <a
+href="https://doi.org/10.1038/ngeo1753">10.1038/ngeo1753</a></p>
+</div>
+</body>
+</html>

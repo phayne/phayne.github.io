@@ -24,9 +24,7 @@
   <body>
 
     <header class="site-header">
-
   <div class="wrapper">
-
     
     <span class="site-title">
         
@@ -50,7 +48,7 @@
         <!-- About -->
         <a class="page-link" href="/">home</a>
 
-        <!-- Pages -->
+        <!-- Pages - Simpler approach that matches your live site -->
         
           
         
@@ -70,24 +68,15 @@
             <a class="page-link" href="/teaching/">teaching</a>
           
         
-          
-        
-          
-        
-          
-        
-
+    
         <!-- Blog -->
-        <a class="page-link" href="/blog/">blog</a>
-
+        <!-- <a class="page-link" href="/blog/">blog</a> -->
+        
         <!-- CV link -->
         <!--- <a class="page-link" href="/assets/files/cv.pdf">vitae</a> --->
-
       </div>
     </nav>
-
   </div>
-
 </header>
 
 
@@ -98,7 +87,7 @@
 
   <header class="post-header">
     <h1 class="post-title">research</h1>
-    <h5 class="post-description"></h5>
+    <h5 class="post-description">Explore our planetary research by celestial body, research theme, or methodology</h5>
   </header>
 
   <article class="post-content research clearfix">
@@ -107,143 +96,549 @@ Research in the EPIC group spans a range of planetary bodies, unified by a focus
 on ice and volatiles. We use numerical methods to model planetary
 surfaces and atmospheres, making and testing predictions using remote sensing data.
 <br /><br />
-Below, you will find links to summaries of past and ongoing research projects.
-Links to data products are also provided, in the spirit of "open science."
+Choose how you'd like to explore our research - by planetary body, research theme, or methodology. Each perspective offers a different lens through which to understand our work.
 </div>
 
-<div class="project ">
-    <div class="thumbnail">
-        <a href="/projects/1_eclipses/">
+<style>
+.category-container {
+  margin-bottom: 40px;
+}
+.category-title {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.category-description {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 25px;
+}
+.project-card {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.project-info {
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+.project-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.project-description {
+  font-size: 14px;
+  margin: 0;
+}
+.nav-tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  border-bottom: 2px solid #ddd;
+}
+.nav-tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background-color: #f1f1f1;
+}
+.nav-tab.active {
+  background-color: white;
+  border-bottom: 2px solid white;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+</style>
+
+<ul class="nav-tabs">
+  <li class="nav-tab active" onclick="openTab('bodies')">Planetary Bodies</li>
+  <li class="nav-tab" onclick="openTab('themes')">Research Themes</li>
+  <li class="nav-tab" onclick="openTab('methods')">Methodologies</li>
+</ul>
+
+<!-- TAB 1: PLANETARY BODIES -->
+<div id="bodies" class="tab-content active">
+  <div class="category-container">
+    <h2 class="category-title">Moon</h2>
+    <p class="category-description">Exploring the lunar surface, from its thermophysical properties to polar ice deposits</p>
+    
+    <div class="project-grid">
+      
         
-        <img class="thumbnail" src="/assets/img/moon.jpg" />
-            
-        <span>
-            <h1>Lunar Eclipses</h1>
-            <br />
-            <p>thermal infrared observations</p>
-        </span>
-        </a>
+          <a href="/projects/1_eclipses/" class="project-card">
+            <img class="project-img" src="/assets/img/moon.jpg" alt="Lunar Eclipses" />
+            <div class="project-info">
+              <h3 class="project-title">Lunar Eclipses</h3>
+              <p class="project-description">thermal infrared observations</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
+  </div>
+
+  <div class="category-container">
+    <h2 class="category-title">Mars</h2>
+    <p class="category-description">Investigating Mars's polar caps, climate cycles, and volatile transport</p>
+    
+    <div class="project-grid">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="/projects/4_mars-pld/" class="project-card">
+            <img class="project-img" src="/assets/img/mars_pld.jpg" alt="Mars Polar Layered Deposits" />
+            <div class="project-info">
+              <h3 class="project-title">Mars Polar Layered Deposits</h3>
+              <p class="project-description">climate records in ice</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+
+  <div class="category-container">
+    <h2 class="category-title">Small Bodies</h2>
+    <p class="category-description">Studying asteroids, dwarf planets, and other small solar system objects</p>
+    
+    <div class="project-grid">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+
+  <div class="category-container">
+    <h2 class="category-title">Outer Solar System</h2>
+    <p class="category-description">Examining icy moons, giant planet systems, and ocean worlds</p>
+    
+    <div class="project-grid">
+      
+        
+      
+        
+          <a href="/projects/2_europa/" class="project-card">
+            <img class="project-img" src="/assets/img/europa.jpg" alt="Europa" />
+            <div class="project-info">
+              <h3 class="project-title">Europa</h3>
+              <p class="project-description">thermal and compositional properties</p>
+            </div>
+          </a>
+        
+      
+        
+          <a href="/projects/3_titan/" class="project-card">
+            <img class="project-img" src="/assets/img/titan.jpg" alt="Titan" />
+            <div class="project-info">
+              <h3 class="project-title">Titan</h3>
+              <p class="project-description">surface-atmosphere interactions</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
 </div>
 
-<div class="project">
-    <div class="thumbnail">
-        <a href="https://europa.nasa.gov" target="\_blank">
+<!-- TAB 2: RESEARCH THEMES -->
+<div id="themes" class="tab-content">
+  <div class="category-container">
+    <h2 class="category-title">Ice and Volatile Transport</h2>
+    <p class="category-description">Exploring how volatiles migrate and evolve on planetary surfaces</p>
+    
+    <div class="project-grid">
+      
         
-        <img class="thumbnail" src="/assets/img/europa.jpg" />
-            
-        <span>
-            <h1>Europa Clipper</h1>
-            <br />
-            <p>NASA's next outer planets flagship</p>
-        </span>
-        </a>
+      
+        
+          <a href="/projects/2_europa/" class="project-card">
+            <img class="project-img" src="/assets/img/europa.jpg" alt="Europa" />
+            <div class="project-info">
+              <h3 class="project-title">Europa</h3>
+              <p class="project-description">thermal and compositional properties</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+          <a href="/projects/4_mars-pld/" class="project-card">
+            <img class="project-img" src="/assets/img/mars_pld.jpg" alt="Mars Polar Layered Deposits" />
+            <div class="project-info">
+              <h3 class="project-title">Mars Polar Layered Deposits</h3>
+              <p class="project-description">climate records in ice</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
+  </div>
+
+  <div class="category-container">
+    <h2 class="category-title">Regolith Properties and Evolution</h2>
+    <p class="category-description">Understanding the physical characteristics and development of planetary surface materials</p>
+    
+    <div class="project-grid">
+      
+        
+          <a href="/projects/1_eclipses/" class="project-card">
+            <img class="project-img" src="/assets/img/moon.jpg" alt="Lunar Eclipses" />
+            <div class="project-info">
+              <h3 class="project-title">Lunar Eclipses</h3>
+              <p class="project-description">thermal infrared observations</p>
+            </div>
+          </a>
+        
+      
+        
+          <a href="/projects/2_europa/" class="project-card">
+            <img class="project-img" src="/assets/img/europa.jpg" alt="Europa" />
+            <div class="project-info">
+              <h3 class="project-title">Europa</h3>
+              <p class="project-description">thermal and compositional properties</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+
+  <div class="category-container">
+    <h2 class="category-title">Climate and Atmospheric Processes</h2>
+    <p class="category-description">Investigating atmospheric dynamics and climate evolution on various worlds</p>
+    
+    <div class="project-grid">
+      
+        
+      
+        
+      
+        
+          <a href="/projects/3_titan/" class="project-card">
+            <img class="project-img" src="/assets/img/titan.jpg" alt="Titan" />
+            <div class="project-info">
+              <h3 class="project-title">Titan</h3>
+              <p class="project-description">surface-atmosphere interactions</p>
+            </div>
+          </a>
+        
+      
+        
+          <a href="/projects/4_mars-pld/" class="project-card">
+            <img class="project-img" src="/assets/img/mars_pld.jpg" alt="Mars Polar Layered Deposits" />
+            <div class="project-info">
+              <h3 class="project-title">Mars Polar Layered Deposits</h3>
+              <p class="project-description">climate records in ice</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+
+  <div class="category-container">
+    <h2 class="category-title">Impact and Geologic Processes</h2>
+    <p class="category-description">Exploring how impacts and geological forces shape planetary surfaces</p>
+    
+    <div class="project-grid">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
 </div>
 
-<div class="project ">
-    <div class="thumbnail">
-        <a href="/projects/3_titan/">
+<!-- TAB 3: METHODOLOGIES -->
+<div id="methods" class="tab-content">
+  <div class="category-container">
+    <h2 class="category-title">Thermal Infrared Remote Sensing</h2>
+    <p class="category-description">Using thermal emissions to characterize planetary surfaces and atmospheres</p>
+    
+    <div class="project-grid">
+      
         
-        <img class="thumbnail" src="/assets/img/titan.jpg" />
-            
-        <span>
-            <h1>Titan Occultations</h1>
-            <br />
-            <p>peering through the haze</p>
-        </span>
-        </a>
+          <a href="/projects/1_eclipses/" class="project-card">
+            <img class="project-img" src="/assets/img/moon.jpg" alt="Lunar Eclipses" />
+            <div class="project-info">
+              <h3 class="project-title">Lunar Eclipses</h3>
+              <p class="project-description">thermal infrared observations</p>
+            </div>
+          </a>
+        
+      
+        
+          <a href="/projects/2_europa/" class="project-card">
+            <img class="project-img" src="/assets/img/europa.jpg" alt="Europa" />
+            <div class="project-info">
+              <h3 class="project-title">Europa</h3>
+              <p class="project-description">thermal and compositional properties</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+          <a href="/projects/4_mars-pld/" class="project-card">
+            <img class="project-img" src="/assets/img/mars_pld.jpg" alt="Mars Polar Layered Deposits" />
+            <div class="project-info">
+              <h3 class="project-title">Mars Polar Layered Deposits</h3>
+              <p class="project-description">climate records in ice</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
-</div>
+  </div>
 
-<div class="project ">
-    <div class="thumbnail">
-        <a href="/projects/4_mars-pld/">
+  <div class="category-container">
+    <h2 class="category-title">Thermophysical Modeling</h2>
+    <p class="category-description">Building numerical models to understand thermal environments and properties</p>
+    
+    <div class="project-grid">
+      
         
-        <img class="thumbnail" src="/assets/img/mars-pld.jpg" />
-            
-        <span>
-            <h1>Mars Paleoclimate</h1>
-            <br />
-            <p>clues in the polar ice deposits</p>
-        </span>
-        </a>
+      
+        
+      
+        
+      
+        
+          <a href="/projects/4_mars-pld/" class="project-card">
+            <img class="project-img" src="/assets/img/mars_pld.jpg" alt="Mars Polar Layered Deposits" />
+            <div class="project-info">
+              <h3 class="project-title">Mars Polar Layered Deposits</h3>
+              <p class="project-description">climate records in ice</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
-</div>
+  </div>
 
-<div class="project ">
-    <div class="thumbnail">
-        <a href="/projects/5_lunar-regolith/">
+  <div class="category-container">
+    <h2 class="category-title">Spectroscopy and Compositional Analysis</h2>
+    <p class="category-description">Determining compositions and properties from spectral signatures</p>
+    
+    <div class="project-grid">
+      
         
-        <img class="thumbnail" src="/assets/img/moon_h-oblique2.jpg" />
-            
-        <span>
-            <h1>Lunar Regolith</h1>
-            <br />
-            <p>formation and evolution</p>
-        </span>
-        </a>
+      
+        
+          <a href="/projects/2_europa/" class="project-card">
+            <img class="project-img" src="/assets/img/europa.jpg" alt="Europa" />
+            <div class="project-info">
+              <h3 class="project-title">Europa</h3>
+              <p class="project-description">thermal and compositional properties</p>
+            </div>
+          </a>
+        
+      
+        
+          <a href="/projects/3_titan/" class="project-card">
+            <img class="project-img" src="/assets/img/titan.jpg" alt="Titan" />
+            <div class="project-info">
+              <h3 class="project-title">Titan</h3>
+              <p class="project-description">surface-atmosphere interactions</p>
+            </div>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
-</div>
+  </div>
 
-<div class="project ">
-    <div class="thumbnail">
-        <a href="/projects/6_ceres/">
+  <div class="category-container">
+    <h2 class="category-title">Mission Science</h2>
+    <p class="category-description">Contributing to spacecraft missions across the solar system</p>
+    
+    <div class="project-grid">
+      
         
-        <img class="thumbnail" src="/assets/img/ceres.jpg" />
-            
-        <span>
-            <h1>Ice on Ceres</h1>
-            <br />
-            <p>thermal and vapor transport models</p>
-        </span>
-        </a>
-    </div>
-</div>
-
-<div class="project ">
-    <div class="thumbnail">
-        <a href="/projects/7_lunar-ice/">
+      
         
-        <img class="thumbnail" src="/assets/img/moon-crater.jpg" />
-            
-        <span>
-            <h1>Ice on the Moon</h1>
-            <br />
-            <p>origins and distribution</p>
-        </span>
-        </a>
-    </div>
-</div>
-
-<div class="project ">
-    <div class="thumbnail">
-        <a href="/projects/8_mars-snow/">
+      
         
-        <img class="thumbnail" src="/assets/img/snowflake.jpg" />
-            
-        <span>
-            <h1>Martian Snow</h1>
-            <br />
-            <p>flurries in the polar night</p>
-        </span>
-        </a>
-    </div>
-</div>
-
-<div class="project ">
-    <div class="thumbnail">
-        <a href="/projects/9_missions/">
+      
         
-        <img class="thumbnail" src="/assets/img/mro.jpg" />
-            
-        <span>
-            <h1>Mission Involvement</h1>
-            <br />
-            <p>exploring distant worlds</p>
-        </span>
-        </a>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
+  </div>
 </div>
 
 <p><br />
@@ -255,7 +650,32 @@ Links to data products are also provided, in the spirit of "open science."
   Also provided in the same directory are thermal inertia (referenced to 273 K) maps at 10 ppd.</p></li>
 </ul>
 
+<script>
+function openTab(tabName) {
+  // Hide all tab contents
+  var tabContents = document.getElementsByClassName("tab-content");
+  for (var i = 0; i < tabContents.length; i++) {
+    tabContents[i].className = tabContents[i].className.replace(" active", "");
+  }
+  
+  // Remove active class from all tabs
+  var tabs = document.getElementsByClassName("nav-tab");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].className = tabs[i].className.replace(" active", "");
+  }
+  
+  // Show the selected tab content
+  document.getElementById(tabName).className += " active";
+  
+  // Add active class to the clicked tab
+  event.currentTarget.className += " active";
+}
+</script>
+
+
   </article>
+
+  
 
   
 
@@ -269,7 +689,7 @@ Links to data products are also provided, in the spirit of "open science."
     <footer>
 
   <div class="wrapper">
-    &copy; Copyright 2020 Paul O. Hayne.
+    &copy; Copyright 2025 Paul O. Hayne.
     Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
     
