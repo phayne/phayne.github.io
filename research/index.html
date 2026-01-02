@@ -91,235 +91,323 @@
   </header>
 
   <article class="post-content research clearfix">
-    <style>
-.research-intro {
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.research-section {
-  margin-bottom: 2.5rem;
-}
-
-.research-section h2 {
-  border-bottom: 2px solid #333;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-}
-
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 1rem;
-}
-
-.research-item {
-  text-align: center;
-}
-
-.research-item a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.research-item a:hover {
-  opacity: 0.8;
-}
-
-.research-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.4rem;
-  border: 1px solid #ddd;
-}
-
-.research-item-label {
-  font-size: 0.85rem;
-  line-height: 1.3;
-}
-
-.mission-category {
-  margin-bottom: 1.5rem;
-}
-
-.mission-category h3 {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.mission-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mission-list li {
-  font-size: 0.9rem;
-}
-
-.mission-list a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.mission-list a:hover {
-  text-decoration: underline;
-}
-
-.data-section {
-  margin-bottom: 1.5rem;
-}
-
-.data-section h3 {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.data-list {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin: 0;
-}
-
-.data-list li {
-  font-size: 0.9rem;
-  margin-bottom: 0.3rem;
-}
-
-.data-list a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.data-list a:hover {
-  text-decoration: underline;
-}
-
-.nested-list {
-  list-style: circle;
-  padding-left: 1.2rem;
-  margin-top: 0.2rem;
-}
-</style>
-
-<div class="research-intro">
+    <div class="summary">
 Research in the EPIC group spans a range of planetary bodies, unified by a focus
-on ice and volatiles. We use numerical methods to model planetary surfaces and 
-atmospheres, making and testing predictions using remote sensing data.
+on ice and volatiles. We use numerical methods to model planetary
+surfaces and atmospheres, making and testing predictions using remote sensing data.
+<br /><br />
+Below, you will find links to summaries of past and ongoing research projects.
+Links to data products are also provided, in the spirit of "open science."
 </div>
 
-<!-- PLANETARY BODIES -->
-<div class="research-section">
-  <h2>Planetary Bodies</h2>
-  <div class="research-grid">
-    <div class="research-item">
-      <a href="/projects/10_moon/">
-        <img class="research-icon" src="/assets/img/research/moon.jpg" alt="Moon" />
-        <div class="research-item-label">Moon</div>
-      </a>
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/10_moon/">
+        
+        <img class="thumbnail" src="/assets/img/research/moon.jpg" />
+            
+        <span>
+            <h1>Moon</h1>
+            <br />
+            <p>polar volatiles and surface thermal properties</p>
+        </span>
+        </a>
     </div>
-    <div class="research-item">
-      <a href="/projects/11_mars/">
-        <img class="research-icon" src="/assets/img/research/mars.jpg" alt="Mars" />
-        <div class="research-item-label">Mars</div>
-      </a>
-    </div>
-    <div class="research-item">
-      <a href="/projects/12_satellites/">
-        <img class="research-icon" src="/assets/img/research/satellites.jpg" alt="Satellites" />
-        <div class="research-item-label">Satellites of the Giant Planets</div>
-      </a>
-    </div>
-    <div class="research-item">
-      <a href="/projects/13_asteroids/">
-        <img class="research-icon" src="/assets/img/research/asteroids.jpg" alt="Asteroids" />
-        <div class="research-item-label">Asteroids &amp; Comets</div>
-      </a>
-    </div>
-  </div>
 </div>
 
-<!-- MISSIONS -->
-<div class="research-section">
-  <h2>Missions</h2>
-  
-  <div class="mission-category">
-    <h3>Moon</h3>
-    <ul class="mission-list">
-      <li><a href="/projects/14_missions/#lro">Lunar Reconnaissance Orbiter</a></li>
-      <li><a href="/projects/14_missions/#lunar-flashlight">Lunar Flashlight</a></li>
-      <li><a href="/projects/14_missions/#lunar-vise">CLPS CP-21: Lunar-VISE</a></li>
-      <li><a href="/projects/14_missions/#l-ciris">CLPS CP-22: L-CIRiS</a></li>
-      <li><a href="/projects/14_missions/#l-maps">Lunar Terrain Vehicle: L-MAPS</a></li>
-    </ul>
-  </div>
-  
-  <div class="mission-category">
-    <h3>Mars</h3>
-    <ul class="mission-list">
-      <li><a href="/projects/14_missions/#mro">Mars Reconnaissance Orbiter</a></li>
-    </ul>
-  </div>
-  
-  <div class="mission-category">
-    <h3>Asteroids</h3>
-    <ul class="mission-list">
-      <li><a href="/projects/14_missions/#ema">Emirates Mission to the Asteroid Belt</a></li>
-      <li><a href="/projects/14_missions/#janus">Janus</a></li>
-      <li><a href="/projects/14_missions/#dawn">Dawn</a></li>
-    </ul>
-  </div>
-  
-  <div class="mission-category">
-    <h3>Outer Solar System</h3>
-    <ul class="mission-list">
-      <li><a href="/projects/14_missions/#europa-clipper">Europa Clipper</a></li>
-      <li><a href="/projects/14_missions/#cassini">Cassini</a></li>
-      <li><a href="/projects/14_missions/#galileo">Galileo</a></li>
-    </ul>
-  </div>
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/11_mars/">
+        
+        <img class="thumbnail" src="/assets/img/research/mars.jpg" />
+            
+        <span>
+            <h1>Mars</h1>
+            <br />
+            <p>surface and atmospheric ice processes</p>
+        </span>
+        </a>
+    </div>
 </div>
 
-<!-- DATASETS AND MODELS -->
-<div class="research-section">
-  <h2>Datasets and Models</h2>
-  
-  <div class="data-section">
-    <h3>Datasets</h3>
-    <ul class="data-list">
-      <li><a href="/projects/20_diviner-h-parameter/">Diviner H-parameter</a> (thermal inertia)</li>
-      <li><a href="/projects/21_lamp-water/">LAMP water detections</a></li>
-      <li><a href="/projects/22_cassini-vims-titan/">Cassini VIMS Titan occultation spectra</a></li>
-      <li><a href="/projects/23_galileo-nims-europa/">Galileo NIMS Europa hyperspectral images</a></li>
-      <li><a href="/projects/24_galileo-ppr/">Galileo PPR thermal maps</a></li>
-    </ul>
-  </div>
-  
-  <div class="data-section">
-    <h3>Models</h3>
-    <ul class="data-list">
-      <li>Thermophysical models:
-        <ul class="nested-list">
-          <li><a href="https://github.com/phayne/heat1d" target="_blank">heat1d</a></li>
-          <li><a href="https://github.com/phayne/PTM3D" target="_blank">PTM3D</a></li>
-        </ul>
-      </li>
-      <li><a href="https://github.com/phayne/atmospheric-rt" target="_blank">Atmospheric radiative transfer</a></li>
-      <li><a href="https://github.com/phayne/spectroscopy" target="_blank">Reflectance and emission spectroscopy</a></li>
-    </ul>
-  </div>
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/12_satellites/">
+        
+        <img class="thumbnail" src="/assets/img/research/satellites.jpg" />
+            
+        <span>
+            <h1>Satellites of the Giant Planets</h1>
+            <br />
+            <p>icy moons of Jupiter and Saturn</p>
+        </span>
+        </a>
+    </div>
 </div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/13_asteroids/">
+        
+        <img class="thumbnail" src="/assets/img/research/asteroids.jpg" />
+            
+        <span>
+            <h1>Asteroids &amp; Comets</h1>
+            <br />
+            <p>small bodies and primitive materials</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/14_missions/">
+        
+        <img class="thumbnail" src="/assets/img/research/missions.jpg" />
+            
+        <span>
+            <h1>Missions</h1>
+            <br />
+            <p>spacecraft missions and instrument involvement</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/1_eclipses/">
+        
+        <img class="thumbnail" src="/assets/img/moon.jpg" />
+            
+        <span>
+            <h1>Lunar Eclipses</h1>
+            <br />
+            <p>thermal infrared observations</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/20_diviner-h-parameter/">
+        
+        <img class="thumbnail" src="/assets/img/research/diviner-h.jpg" />
+            
+        <span>
+            <h1>Diviner H-parameter</h1>
+            <br />
+            <p>lunar thermal inertia maps</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/21_lamp-water/">
+        
+        <img class="thumbnail" src="/assets/img/research/lamp-water.jpg" />
+            
+        <span>
+            <h1>LAMP Water Detections</h1>
+            <br />
+            <p>lunar far-UV water signatures</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/22_cassini-vims-titan/">
+        
+        <img class="thumbnail" src="/assets/img/research/vims-titan.jpg" />
+            
+        <span>
+            <h1>Cassini VIMS Titan Occultation Spectra</h1>
+            <br />
+            <p>Titan atmospheric spectra from solar occultations</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/23_galileo-nims-europa/">
+        
+        <img class="thumbnail" src="/assets/img/research/nims-europa.jpg" />
+            
+        <span>
+            <h1>Galileo NIMS Europa Hyperspectral Images</h1>
+            <br />
+            <p>Europa surface composition from near-infrared spectroscopy</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/24_galileo-ppr/">
+        
+        <img class="thumbnail" src="/assets/img/research/ppr-europa.jpg" />
+            
+        <span>
+            <h1>Galileo PPR Thermal Maps</h1>
+            <br />
+            <p>Europa thermal emission observations</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project">
+    <div class="thumbnail">
+        <a href="https://europa.nasa.gov" target="\_blank">
+        
+        <img class="thumbnail" src="/assets/img/europa.jpg" />
+            
+        <span>
+            <h1>Europa</h1>
+            <br />
+            <p>thermal and compositional properties</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/3_titan/">
+        
+        <img class="thumbnail" src="/assets/img/titan.jpg" />
+            
+        <span>
+            <h1>Titan</h1>
+            <br />
+            <p>surface-atmosphere interactions</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/4_mars-pld/">
+        
+        <img class="thumbnail" src="/assets/img/mars_pld.jpg" />
+            
+        <span>
+            <h1>Mars Polar Layered Deposits</h1>
+            <br />
+            <p>climate records in ice</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/5_lunar-regolith/">
+        
+        <img class="thumbnail" src="/assets/img/moon_h-oblique2.jpg" />
+            
+        <span>
+            <h1>Lunar Regolith</h1>
+            <br />
+            <p>formation and evolution</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/6_ceres/">
+        
+        <img class="thumbnail" src="/assets/img/ceres.jpg" />
+            
+        <span>
+            <h1>Ice on Ceres</h1>
+            <br />
+            <p>thermal and vapor transport models</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/7_lunar-ice/">
+        
+        <img class="thumbnail" src="/assets/img/moon-crater.jpg" />
+            
+        <span>
+            <h1>Ice on the Moon</h1>
+            <br />
+            <p>origins and distribution</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/8_mars-snow/">
+        
+        <img class="thumbnail" src="/assets/img/snowflake.jpg" />
+            
+        <span>
+            <h1>Martian Snow</h1>
+            <br />
+            <p>flurries in the polar night</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<div class="project ">
+    <div class="thumbnail">
+        <a href="/projects/9_missions/">
+        
+        <img class="thumbnail" src="/assets/img/mro.jpg" />
+            
+        <span>
+            <h1>Mission Involvement</h1>
+            <br />
+            <p>exploring distant worlds</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+<p><br /></p>
+<h2 id="datasets-and-models">Datasets and Models</h2>
+
+<h3 id="datasets">Datasets</h3>
+<ul>
+  <li><b>Moon</b>
+    <ul>
+      <li><a href="https://goo.gl/JhMGs5" target="\_blank">Diviner H-parameter</a> (thermal inertia).
+      <p>In this directory, you will find maps of the H-parameter in meters, along with latitude and longitude grids.
+      These data files are in 32-bit floating point format, 128 pixels per degree (ppd), spanning -70 to +70 degrees latitude.
+      Also provided in the same directory are thermal inertia (referenced to 273 K) maps at 10 ppd.</p></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="models">Models</h3>
+<ul>
+  <li><b>Thermophysical models:</b>
+    <ul>
+      <li><a href="https://github.com/phayne/PTM3D" target="\_blank">PTM3D</a> <span style="color: #888; font-style: italic;">(private)</span> — Planetary Thermal Model 3D</li>
+    </ul>
+  </li>
+</ul>
 
   </article>
 
