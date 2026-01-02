@@ -91,7 +91,7 @@
   </header>
 
   <article class="post-content Diviner H-parameter clearfix">
-    <p>The H-parameter is a measure of thermal inertia derived from Diviner Lunar Radiometer observations aboard the Lunar Reconnaissance Orbiter. These maps characterize the thermophysical properties of the upper few centimeters of the lunar regolith.</p>
+    <p>The H-parameter is a measure of subsurface structure derived from Diviner Lunar Radiometer observations aboard the Lunar Reconnaissance Orbiter. These maps characterize the thermophysical properties of the upper few centimeters of the lunar regolith.</p>
 
 <div class="img_row">
     <img class="col three" src="/assets/img/h-parameter-map.jpg" alt="H-parameter map" title="Global H-parameter map" />
@@ -134,18 +134,16 @@
 <p>The data directory contains:</p>
 
 <ul>
-  <li><strong>H-parameter maps</strong> — Values in meters, representing the characteristic depth scale of diurnal temperature variations</li>
+  <li><strong>H-parameter maps</strong> — Values in meters, representing the e-folding depth scale of the regolith density and conductivity profiles</li>
   <li><strong>Latitude and longitude grids</strong> — Corresponding coordinate arrays for georeferencing</li>
   <li><strong>Thermal inertia maps</strong> — Derived thermal inertia referenced to 273 K, at 10 pixels per degree resolution</li>
 </ul>
 
 <h4 id="scientific-background">Scientific Background</h4>
 
-<p>The H-parameter describes how temperature waves propagate into the lunar subsurface during the day-night cycle. It is related to thermal inertia (Γ) by:</p>
+<p>The H-parameter describes the characteristic length scale over which regolith density and thermal conductivity increase with depth due to compaction. It is the e-folding depth of the exponential density and conductivity profiles in the upper regolith.</p>
 
-<p>H = Γ / (ρc)</p>
-
-<p>where ρ is density and c is specific heat capacity. Higher H values indicate coarser or more consolidated surface materials, while lower values suggest fine-grained regolith.</p>
+<p>Lower H values indicate more rapid densification with depth, corresponding to higher thermal inertia materials such as rocks or consolidated regolith. Higher H values indicate a more gradual density profile, characteristic of fine-grained, porous regolith with lower thermal inertia.</p>
 
 <h4 id="usage-notes">Usage Notes</h4>
 
@@ -161,13 +159,13 @@
 
 <h4 id="download">Download</h4>
 
-<p><a href="https://goo.gl/JhMGs5" target="_blank" class="btn btn-primary">Download Dataset</a></p>
+<p><a href="https://o365coloradoedu-my.sharepoint.com/:f:/g/personal/paha3326_colorado_edu/Ek_HjDuQUIVPnvCyh2gpWWIBFtlDaEM3ESSqr9URoh6u5Q" target="_blank" class="btn btn-primary">Download Dataset</a></p>
 
 <div class="publications">
 <h4>Citation</h4>
 <p>If you use these data in your research, please cite:</p>
 <ul>
-<li><u>Hayne, P. O.</u>, Bandfield, J. L., Siegler, M. A., Vasavada, A. R., Ghent, R. R., Williams, J.-P., ... &amp; Paige, D. A. (2017). Global regolith thermophysical properties of the Moon from the Diviner Lunar Radiometer Experiment. <i>Journal of Geophysical Research: Planets, 122</i>, 2371–2400.
+<li><u>Hayne, P. O.</u>, Bandfield, J. L., Siegler, M. A., Vasavada, A. R., Ghent, R. R., Williams, J.-P., Greenhagen, B. T., Aharonson, O., Elder, C. M., Lucey, P. G., &amp; Paige, D. A. (2017). Global regolith thermophysical properties of the Moon from the Diviner Lunar Radiometer Experiment. <i>Journal of Geophysical Research: Planets, 122</i>, 2371–2400.
 <a href="https://doi.org/10.1002/2017JE005387" target="_blank">Link</a></li>
 </ul>
 </div>
