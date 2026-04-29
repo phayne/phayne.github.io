@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>
+    Paul O. Hayne
+     | research
+    
+  </title>
+  <meta name="description" content="A simple academic web site design. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+
+  <!--- <link rel="shortcut icon" href="/assets/img/favicon.ico"> --->
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/research/">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    
+    <span class="site-title">
+        
+        Paul <strong>Hayne</strong>
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="/">home</a>
+
+        <!-- Pages - Simpler approach that matches your live site -->
+        
+          
+        
+          
+            <a class="page-link" href="/group/">group</a>
+          
+        
+          
+            <a class="page-link" href="/research/">research</a>
+          
+        
+          
+            <a class="page-link" href="/publications/">publications</a>
+          
+        
+          
+            <a class="page-link" href="/teaching/">teaching</a>
+          
+        
+    
+        <!-- Blog -->
+        <!-- <a class="page-link" href="/blog/">blog</a> -->
+        
+        <!-- CV link -->
+        <!--- <a class="page-link" href="/assets/files/cv.pdf">vitae</a> --->
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">research</h1>
+    <h5 class="post-description"></h5>
+  </header>
+
+  <article class="post-content research clearfix">
+    <style>
+.research-intro {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.research-section {
+  margin-bottom: 2.5rem;
+}
+
+.research-section h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.research-item {
+  text-align: center;
+}
+
+.research-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.research-item a:hover {
+  opacity: 0.8;
+}
+
+.research-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.4rem;
+  border: 1px solid #ddd;
+}
+
+.research-item-label {
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.mission-category {
+  margin-bottom: 1.5rem;
+}
+
+.mission-category h3 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.mission-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mission-list li {
+  font-size: 0.9rem;
+}
+
+.mission-list a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.mission-list a:hover {
+  text-decoration: underline;
+}
+
+.data-section {
+  margin-bottom: 1.5rem;
+}
+
+.data-section h3 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.data-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.data-list li {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.data-list a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.data-list a:hover {
+  text-decoration: underline;
+}
+
+.nested-list {
+  list-style: circle;
+  padding-left: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.private-note {
+  color: #888;
+  font-style: italic;
+  font-size: 0.85em;
+}
+</style>
+
+<div class="research-intro">
+Research in the EPIC group spans a range of planetary bodies, unified by a focus
+on ice and volatiles. We use numerical methods to model planetary surfaces and 
+atmospheres, making and testing predictions using remote sensing data.
+</div>
+
+<!-- PLANETARY BODIES -->
+<div class="research-section">
+  <h2>Planetary Bodies</h2>
+  <div class="research-grid">
+    <div class="research-item">
+      <a href="/projects/10_moon/">
+        <img class="research-icon" src="/assets/img/research/moon.jpg" alt="Moon" />
+        <div class="research-item-label">Moon</div>
+      </a>
+    </div>
+    <div class="research-item">
+      <a href="/projects/11_mars/">
+        <img class="research-icon" src="/assets/img/research/mars.jpg" alt="Mars" />
+        <div class="research-item-label">Mars</div>
+      </a>
+    </div>
+    <div class="research-item">
+      <a href="/projects/12_satellites/">
+        <img class="research-icon" src="/assets/img/research/satellites.jpg" alt="Satellites" />
+        <div class="research-item-label">Satellites of the Giant Planets</div>
+      </a>
+    </div>
+    <div class="research-item">
+      <a href="/projects/13_asteroids/">
+        <img class="research-icon" src="/assets/img/research/asteroids.jpg" alt="Asteroids" />
+        <div class="research-item-label">Asteroids &amp; Comets</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- MISSIONS -->
+<div class="research-section">
+  <h2>Missions</h2>
+  
+  <div class="mission-category">
+    <h3>Moon</h3>
+    <ul class="mission-list">
+      <li><a href="/projects/14_missions/#lro">Lunar Reconnaissance Orbiter</a></li>
+      <li><a href="/projects/14_missions/#lunar-flashlight">Lunar Flashlight</a></li>
+      <li><a href="/projects/14_missions/#lunar-vise">CLPS CP-21: Lunar-VISE</a></li>
+      <li><a href="/projects/14_missions/#l-ciris">CLPS CP-22: L-CIRiS</a></li>
+      <li><a href="/projects/14_missions/#l-maps">Lunar Terrain Vehicle: L-MAPS</a></li>
+    </ul>
+  </div>
+  
+  <div class="mission-category">
+    <h3>Mars</h3>
+    <ul class="mission-list">
+      <li><a href="/projects/14_missions/#mro">Mars Reconnaissance Orbiter</a></li>
+    </ul>
+  </div>
+  
+  <div class="mission-category">
+    <h3>Asteroids</h3>
+    <ul class="mission-list">
+      <li><a href="/projects/14_missions/#ema">Emirates Mission to the Asteroid Belt</a></li>
+      <li><a href="/projects/14_missions/#janus">Janus</a></li>
+      <li><a href="/projects/14_missions/#dawn">Dawn</a></li>
+    </ul>
+  </div>
+  
+  <div class="mission-category">
+    <h3>Outer Solar System</h3>
+    <ul class="mission-list">
+      <li><a href="/projects/14_missions/#europa-clipper">Europa Clipper</a></li>
+      <li><a href="/projects/14_missions/#cassini">Cassini</a></li>
+      <li><a href="/projects/14_missions/#galileo">Galileo</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- DATASETS AND MODELS -->
+<div class="research-section">
+  <h2>Datasets and Models</h2>
+  
+  <div class="data-section">
+    <h3>Datasets</h3>
+    <ul class="data-list">
+      <li><a href="/projects/20_diviner-h-parameter/">Diviner H-parameter</a> (thermal inertia)</li>
+      <li><a href="/projects/21_lamp-water/">LAMP water detections</a></li>
+      <li><a href="/projects/22_cassini-vims-titan/">Cassini VIMS Titan occultation spectra</a></li>
+      <li><a href="/projects/23_galileo-nims-europa/">Galileo NIMS Europa hyperspectral images</a></li>
+      <li><a href="/projects/24_galileo-ppr/">Galileo PPR thermal maps</a></li>
+    </ul>
+  </div>
+  
+  <div class="data-section">
+    <h3>Models</h3>
+    <ul class="data-list">
+      <li>Thermophysical models:
+        <ul class="nested-list">
+          <li><a href="https://github.com/phayne/heat1d" target="_blank">heat1d</a></li>
+          <li><a href="https://github.com/phayne/PTM3D" target="_blank">PTM3D</a> <span class="private-note">(private)</span></li>
+        </ul>
+      </li>
+      <li>Atmospheric radiative transfer</li>
+      <li><a href="https://github.com/phayne/planet-tools" target="_blank">Reflectance and emission spectroscopy</a></li>
+    </ul>
+  </div>
+</div>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2026 Paul O. Hayne.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-XXXXXXXXX', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>
